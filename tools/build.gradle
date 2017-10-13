@@ -1,0 +1,6 @@
+
+dependencies {
+
+    compile project(":core")
+    compile ":emf:2.8.1"
+}
