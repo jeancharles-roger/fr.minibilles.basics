@@ -11,3 +11,5 @@ bin/
 
 .gradle/
 build/
+
+tools-ant/src-generated

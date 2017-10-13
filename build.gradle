@@ -12,4 +12,8 @@ allprojects {
         jcenter()
         flatDir { dirs(rootProject.file('libraries')) }
     }
+
+    dependencies {
+        testCompile "junit:junit:4.12"
+    }
 }
