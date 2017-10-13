@@ -1,0 +1,17 @@
+
+dependencies {
+    // to add new dependencies for compile add them in allDependenciesForPlatform method
+    def platform = System.getProperty('os.name').toLowerCase().split()[0]
+    def arch = System.getProperty('os.arch')
+    for (def dependency : allDependenciesForPlatform(platform, arch)) {
+        compile dependency
+    }
+}
+
+def allDependenciesForPlatform(String platform, String arch) {
+    def dependencies = []
+
+    dependencies += project(':core')
+    dependencies += ":swt-${swtVersion}-${platform}-${arch}:"
+    return dependencies
+}

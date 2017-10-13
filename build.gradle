@@ -6,6 +6,8 @@ allprojects {
     group 'fr.minibilles.basics'
     version '1.0.0'
 
+    project.ext.swtVersion = "3.6.1"
+
     repositories {
         flatDir { dirs(rootProject.file('libraries')) }
     }
