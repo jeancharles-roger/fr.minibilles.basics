@@ -1,0 +1,118 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Documentation de Basics</title>
+<style type="text/css" media="all">@import "DocumentationBasics.css";</style>
+</head>
+<body id="css-zen-garden">
+<div id="Root">
+<div id="Basics">
+<h1 class="title">Documentation de Basics</h1>
+<div>Basics est un framework d'application Java. Son but est de fournir un ensemble de fonctionnalit&eacute;s de bases n&eacute;cessaires &agrave; la cr&eacute;ation d'une application. Il propose des solutions simples et efficaces &agrave; des probl&egrave;mes courants dans le d&eacute;veloppement d'applications. &Agrave; l'origine, ce framework a &eacute;t&eacute; d&eacute;velopp&eacute; pour la cr&eacute;ation d'outils logiciels. Il peut tr&egrave;s bien s'adapter &agrave; d'autres domaines.</div>
+<div>Une application cr&eacute;&eacute;e avec Basics pourra offrir rapidement une sauvegarde sur fichier tr&egrave;s efficace, une fonctionnalit&eacute; d'anuler/refaire, une interface graphique homog&egrave;ne, dynamique et souple ainsi qu'une &eacute;dition graphique (diagramme) de mod&egrave;les. Elle pourra aussi offrir des fonctionnalit&eacute;s de g&eacute;n&eacute;ration, de compilation et d'ex&eacute;cution de code source Java, C ou autre.</div>
+<div>D'un point de vue technique, Basics est framework Java (version 1.5 minimum). La partie graphique est bas&eacute;e sur SWT (Standard Widget Toolkit). Le choix de SWT s'est impos&eacute; par son int&eacute;gration parfaite dans le syst&egrave;me h&ocirc;te. De plus, SWT a &eacute;t&eacute; tr&egrave;s bien pens&eacute; et son utilisation reste intuitive.</div>
+<div>Le mot d&rsquo;ordre dans Basics est la simplicit&eacute;, la simplicit&eacute; dans l&rsquo;impl&eacute;mentation et dans l&rsquo;utilisation, attention cependant, simple mais pas simpliste. Les concepts abord&eacute;s et les probl&egrave;mes r&eacute;solus ne sont pas triviaux. Un autre point important, un soin particulier a &eacute;t&eacute; et est apport&eacute; aux API propos&eacute;es afin d&rsquo;en rendre l&rsquo;utilisation intuitive.</div>
+</div>
+<div id="Core">
+<div id="Core">
+<h2 class="title">Core</h2>
+<div></div>
+</div>
+<div id="Commun">
+<div id="Commun">
+<h3 class="title">Commun</h3>
+<div>Cette page pr&eacute;sente les aspects communs de Basics utilis&eacute;s par la plupart des autres composants.</div>
+<h4 class="title">Styles</h4>
+<div>Si vous connaissez SWT, vous ne serez pas perdu avec ce principe. L'id&eacute;e des styles est d'indiquer lors de la cr&eacute;ation d'un objet un ensemble de param&egrave;tres regroup&eacute;s &agrave; l'int&eacute;rieur d'un seul entier. Ces param&egrave;tres sont immuables, une fois l'objet cr&eacute;&eacute;, ils ne peuvent plus &ecirc;tre modifi&eacute;s.</div>
+<div>Les classes qui utilisent des styles poss&egrave;dent des constructeurs contentant un param&egrave;tre entier nomm&eacute; style.</div>
+<div>La classe Basics regroupe les styles pour Basics.</div>
+<div>La classe BasicsUI regroupe les styles pour les aspects graphiques de Basics.</div>
+<h4 class="title">Gestion d'erreurs</h4>
+<div>La gestion des erreurs dans Basics est d&eacute;l&eacute;gu&eacute; aux ErrorHandler.</div>
+<div class="TODO"> (Diagnostic, ErrorHandler, DiagnosticUtil)</div>
+<h4 class="title">Gestion d'actions longues</h4>
+<div class="TODO"> (ActionMonitor)</div>
+</div>
+</div>
+<div id="Serialisation">
+<div id="Serialisation">
+<h3 class="title">S&eacute;rialisation</h3>
+<h4 class="title">Concept</h4>
+<div>Basics permet de sauvegarder et charger des objets dans des fichiers ou des flux au travers des classes Boost. Le format de fichier utilis&eacute; est un format texte simple ou seules les informations n&eacute;cessaires et suffisantes sont enregistr&eacute;es. Les s&eacute;parateurs sont minimaux et seules les donn&eacute;es brutes sont pr&eacute;sentes. Le but est de rendre la lecture et l&rsquo;&eacute;criture la plus rapide possible limitant au maximum le nombre de calculs.</div>
+<div class="note"> 
+<span class="emphasis">Pourquoi un format texte</span> Le format texte permet d&rsquo;enregistrer les petits nombres entiers et d&eacute;cimaux avec une petite pr&eacute;cision avec moins d&rsquo;octets. Ces nombres sont les plus couramment utilis&eacute;s, cela permet un gain de taille. Le format texte permet aussi d&rsquo;&eacute;diter les fichiers plus simplement, cependant le format n&rsquo;est pas simple &agrave; lire.</div>
+<div>Il est est pr&eacute;vu &agrave; terme de permettre d&rsquo;utiliser un fichier de sauvegarde binaire ainsi que la compression des donn&eacute;es &agrave; la vol&eacute;e.</div>
+<div>Chaque objet sauvegard&eacute; (hors type primitif et la classe <span class="code">java.lang.String</span>) doit contenir le code n&eacute;cessaire &agrave; sa sauvegarde et &agrave; sa lecture, l&rsquo;un &eacute;tant le stricte sym&eacute;trique de l&rsquo;autre. Boost fournit l&rsquo;ensemble des m&eacute;thodes n&eacute;cessaires pour rendre se code simple, lisible et maintenable sans effort.</div>
+<div>La sauvegarde est effectu&eacute;e &agrave; partir d&rsquo;une s&eacute;rie d&rsquo;objets racines, en g&eacute;n&eacute;ral un seul, et parcours le graphe des objets en fonction de leur apparition dans les m&eacute;thodes de sauvegarde. Chaque fois qu&rsquo;un objet inconnu apparait, il est sauvegard&eacute;, il est ensuite r&eacute;f&eacute;renc&eacute; dans le reste du fichier. Cela correspond &agrave; un parcours en profondeur d&rsquo;abord du graphe d&rsquo;objets.</div>
+<div class="note"> 
+<span class="emphasis">R&eacute;f&eacute;rence d&rsquo;objet</span> Un objet, lorsqu&rsquo;il est sauvegard&eacute;, est r&eacute;f&eacute;renc&eacute; par Boost. L&rsquo;id qui lui est donn&eacute;e un chiffre unique dans le fichier. Ce proc&eacute;d&eacute; interdit toute r&eacute;f&eacute;rence externe, puisque d&rsquo;une sauvegarde &agrave; une autre cette r&eacute;f&eacute;rence &agrave; de grandes probabilit&eacute;s de changer. Ce m&eacute;canisme de r&eacute;f&eacute;rencement ne permet pas une sauvegarde multi-fichiers. Pour r&eacute;soudre ce probl&egrave;me, le r&eacute;f&eacute;rencement doit &ecirc;tre revu.</div>
+<div>Si, il parait surprenant d&rsquo;avoir &agrave; &eacute;crire du code pour s&eacute;rialiser, alors que la plupart des autres techniques la proposent sans avoir &agrave; en &eacute;crire. Cette approche a pour avantages que le code de lecture/chargement est compil&eacute; et ex&eacute;cut&eacute; par la JVM qui l&rsquo;optimise et que la gestion de version de fichiers et l&rsquo;&eacute;volution des objets &agrave; s&eacute;rialiser est simple &agrave; maintenir. Les performances sont alors optimales pour un effort minimal.</div>
+<h4 class="title">Mise en oeuvre pour un flux simple</h4>
+<div>La classe JBoost permet de lire et d'&eacute;crire au format boost dans un flux des objets primitifs. JBoost est une implementation de l'interface Boost.</div>
+<div class="code">JBoost boost = new JBoost("SimpleTest", 1);</div>
+<div>Pour &eacute;crire dans un fichier, il faut initialiser l'objet boost,</div>
+<div class="code">boost.initializeWriting(new FileOutputStream("to/my/file.ext"));</div>
+<div>puis &eacute;crire dedans.</div>
+<div class="code">boost.initializeWriting(new FileOutputStream(file));</div>
+<div class="code">boost.writeBoolean(true);</div>
+<div class="code">boost.writeDouble(Math.PI);</div>
+<div class="code">boost.writeString("Here is a &ugrave; string with \" strange things \' inside.");</div>
+<div class="code">BoostUtil.writeIntArray(boost, new int[] { 0, 1, 2, 3, 4 });</div>
+<div>L'&eacute;criture se termine par la fermeture de boost. Cette op&eacute;ration ferme le flux donn&eacute; en param&egrave;tre de l'initialisation.</div>
+<div class="code">boost.close(); </div>
+<div>Pour relire, la proc&eacute;dure est similaire. Il faut initialiser l'objet boost,</div>
+<div class="code">boost.initializeReading(new FileInputStream("to/my/file.ext"));</div>
+<div>Puis relire les objets dans le m&ecirc;me ordre, la s&eacute;rialisation Boost est pr&eacute;dictive.</div>
+<div class="code">System.out.println("Reading :");</div>
+<div class="code">System.out.println("- " + boost.readBoolean());</div>
+<div class="code">System.out.println("- " + boost.readDouble());</div>
+<div class="code">System.out.println("- " + boost.readString());</div>
+<div class="code">System.out.println("- " + Arrays.toString(BoostUtil.readIntArray(boost)));</div>
+<div>Enfin, on ferme boost.</div>
+<div class="code">boost.close(); </div>
+<div>Exemple: BoostSimpleTest.</div>
+<h4 class="title">S&eacute;rialiser un <span class="code">BoostObject</span>
+</h4>
+<div>Lorsque qu'une classe impl&eacute;mente l'interface BoostObject, ses instances peuvent &ecirc;tre lus ou &eacute;crites dans un flux Boost. La classe doit aussi fournir un constructeur ayant un seul param&egrave;tre typ&eacute; Boost pour que JBoost puisse cr&eacute;er une instance lors de la lecture. Ce constructeur doit exister, mais il peut &ecirc;tre private ou protected.</div>
+<div>Exemple: PersonV1.</div>
+<div class="note"> 
+<span class="emphasis">Enregistrer un objet</span> Dans l'exemple pr&eacute;c&eacute;dant, la premi&egrave;re ligne du constructeur de Person1(Boost boost) est: <span class="code">boost.register(this);</span>. Cette instruction est indispensable et doit-&ecirc;tre pr&eacute;sente dans chaque constructeur Boost des BoostObject. Elle enregistre l'objet nouvellement cr&eacute;er dans le m&eacute;canisme de r&eacute;f&eacute;rencement afin de le rendre disponible pour les objets suivants.</div>
+<div>En effet, cet enregistrement permet de r&eacute;soudre les liens entre les objets. Si il n'est pas fait, certains liens seront cass&eacute;s et il est peu probable que la lecture se termine correctement.</div>
+<h4 class="title">Gestion de version de fichier</h4>
+<div>Boost permet de g&eacute;rer les versions de fichiers. Reprenons la cr&eacute;ation d'un objet JBoost:</div>
+<div class="code">JBoost boost = new JBoost("SimpleTest", 1);</div>
+<div>"SimpleTest" est le nom de format de fichier Boost, cela permet de diff&eacute;rencier un fichier Boost d'un autre. 1 est la version du fichier, cela permet de diff&eacute;rencier les versions.</div>
+<div>Exemple: PersonV2.</div>
+</div>
+</div>
+<div id="SuivitDesModifications">
+<div id="SuivitDesModifications">
+<h3 class="title">Suivit des modifications</h3>
+<h4 class="title">Concept</h4>
+<div>Basics propose des outils pour suivre les modifications d&rsquo;un ensemble d&rsquo;objets. Ce suivi permet d&rsquo;effectuer les actions de annuler/refaire. La mise en place du suivit est simple et peu intrusif. Cependant, il apporte quelques contraintes sur le code des objets suivis. Un ChangeHandler permet de mettre en oeuvre ce m&eacute;canisme. Dans la suite de cette article, un mod&egrave;le est un ensemble d'objets dont nous souhaitons suivre l'&eacute;tat.</div>
+<div>Lors de la modification d&rsquo;un mod&egrave;le, le ChangeHandler sauvegarde les informations n&eacute;cessaires pour &ecirc;tre capable d&rsquo;ex&eacute;cuter l&rsquo;ordre inverse lors d&rsquo;une annulation de la modification. Afin de rester simple, les informations enregistr&eacute;es sont minimales, cela impose des heuristiques sur le prototype et le nom des m&eacute;thodes d&rsquo;acc&egrave;s des attributs des objets.</div>
+<h4 class="title">Sauvegarder les changements</h4>
+<div>Le ChangeHandler pour un mod&egrave;le donn&eacute; doit &ecirc;tre unique. Chaque objet du mod&egrave;le doit avoir acc&egrave;s au ChangeHandler. Le m&eacute;canisme pour le fournir est libre, par contre si l'acc&egrave;s y est impossible le fonctionnement du suivit deviendra hi&eacute;ratique. En effet, la gestion de ce m&eacute;canisme est sensible aux rat&eacute;s, si il manque une information le mod&egrave;le risque d'&ecirc;tre inconsistant.</div>
+<div>La mise en oeuvre d'un ChangeHandler sur un mod&egrave;le est d&eacute;licate au d&eacute;part, mais avec un peu de rigueur le r&eacute;sultat est plus que satisfaisant.</div>
+<h4 class="title">Heuristiques de nom de m&eacute;thodes d&rsquo;acc&egrave;s</h4>
+<div>Les heuristiques utilis&eacute;es par ChangeHandler sont simples et courantes dans le monde Java. Les m&eacute;thodes d&rsquo;acc&egrave;s &agrave; un attribut sont:</div>
+<div>pour une cardinalit&eacute; simple:</div>
+<div class="code">set[nom de l&rsquo;attribut au format CamelCase]([type de l&rsquo;attribut]).</div>
+<div>pour une table ou une liste:</div>
+<div class="code">add[nom de l&rsquo;attribut au format CamelCase](int, [type de l&rsquo;attribut]) et</div>
+<div>remove[nom de l&rsquo;attribut au format CamelCase](int),</div>
+<div>pour un dictionnaire:</div>
+<div class="code">put[nom de l&rsquo;attribut au format CamelCase]([type de la cl&eacute;], [type de la valeur]) et</div>
+<div class="code">remove[nom de l&rsquo;attribut au format CamelCase]([type de la cl&eacute;]).</div>
+<div>Seules ces m&eacute;thodes doivent &ecirc;tre instrument&eacute;es pour sauvegarder les changements. Il est possible (m&ecirc;me conseill&eacute; :) ) de fournir d'autres accesseurs. Cependant, ils devront imp&eacute;rativement appel&eacute;s les accesseurs instrument&eacute;s. Les m&eacute;thodes instrument&eacute;es peuvent &ecirc;tre aussi bien publiques que priv&eacute;e.</div>
+<div class="note"> 
+<span class="emphasis">CamelCase</span> C'est un formatage de la case d'une suite de mot, par exemple 'toto fait du v&eacute;lo' devient 'totoFaitDuV&eacute;lo' ( Wikipedia).</div>
+<div>Exemple pour un mod&egrave;le simple: Person.</div>
+<h4 class="title">Transactions</h4>
+<div class="TODO"> Transactions</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
