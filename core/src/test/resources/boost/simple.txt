@@ -1,0 +1,1 @@
+XidFile 1 s10:SimpleTest 1 t 3.141592653589793 s50:Here is a ù string with " strange things ' inside. 5 0 1 2 3 4 

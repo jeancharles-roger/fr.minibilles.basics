@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<sequence>
+<lifeline id="producer1" x="80">Producer
+(one)</lifeline>
+<lifeline id="producer2" x="300">Producer
+(two)</lifeline>
+<lifeline id="bus" x="450">Bus</lifeline>
+<lifeline id="consumer" x="600">Consumer</lifeline>
+<hline>Producer one sends 'a'</hline>
+<message source="producer1" target="bus">a</message>
+<pause/>
+<hline>Producer two sends 'b'</hline>
+<message source="producer2" target="bus">b</message>
+<pause/>
+<hline>Bus follows 'a'</hline>
+<message source="bus" target="consumer">a</message>
+<message source="consumer" target="bus">ok</message>
+<message source="bus" target="producer1">ok</message>
+<pause/>
+<hline>Bus follows 'b'</hline>
+<message source="bus" target="consumer">b</message>
+<message source="consumer" target="bus">ok</message>
+<message source="bus" target="producer2">ok</message>
+<pause/>
+</sequence>

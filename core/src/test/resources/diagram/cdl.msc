@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<sequence>
+<lifeline id="DCM" x="80">DCM</lifeline>
+<lifeline id="PaceMaker" x="300">PaceMaker</lifeline>
+
+<message source="DCM" target="PaceMaker"></message>
+<message source="DCM" target="PaceMaker">changeParameter(URL, 70)</message>
+<message source="DCM" target="PaceMaker">changeParameter(AVDelay, 200)</message>
+</sequence>

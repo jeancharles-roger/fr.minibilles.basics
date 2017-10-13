@@ -1,0 +1,5 @@
+
+dependencies {
+
+    testCompile ":ecj:3.4.1"
+}
