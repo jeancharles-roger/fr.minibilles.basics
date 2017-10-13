@@ -1,1 +1,1 @@
-include "core", "ui", "tools"
+include "core", "ui", "tools", "tools-ant"

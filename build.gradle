@@ -9,6 +9,7 @@ allprojects {
     project.ext.swtVersion = "3.6.1"
 
     repositories {
+        jcenter()
         flatDir { dirs(rootProject.file('libraries')) }
     }
 }
