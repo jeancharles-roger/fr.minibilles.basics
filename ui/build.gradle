@@ -1,10 +1,19 @@
 
 dependencies {
     // to add new dependencies for compile add them in allDependenciesForPlatform method
-    def arch = System.getProperty('os.arch')
-    for (def dependency : allDependenciesForPlatform(platform(), arch)) {
+    for (def dependency : allDependenciesForPlatform(platform(), arch())) {
         compile dependency
     }
+}
+
+def arch() {
+    def arch = System.getProperty('os.arch')
+    switch (arch) {
+        case "x86": case "x86_64": return arch
+        case "amd": return "x86"
+        case "amd64": return "x86_64"
+    }
+    return arch
 }
 
 def platform() {
@@ -14,6 +23,7 @@ def platform() {
         case "linux": return "gtk.linux"
         case "windows": return "win32.win32"
     }
+    return platform
 }
 
 def allDependenciesForPlatform(String platform, String arch) {
