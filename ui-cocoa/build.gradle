@@ -2,5 +2,5 @@
 dependencies {
     compile project(':core')
     compile project(':ui')
-    compile ":swt:${swtVersion}-mac-x86_64"
+    compile "org.eclipse.swt:org.eclipse.swt.cocoa.macosx:4.3"
 }
