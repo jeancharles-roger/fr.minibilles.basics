@@ -1,5 +1,4 @@
 
 dependencies {
-
-    testCompile ":ecj:3.4.1"
+    testCompile "org.eclipse.jdt:ecj:3.12.3"
 }
