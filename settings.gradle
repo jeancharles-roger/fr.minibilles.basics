@@ -1,1 +1,3 @@
-include "core", "ui", "tools", "tools-ant"
+include "core"
+include "ui", "ui-cocoa"
+include "tools", "tools-ant"

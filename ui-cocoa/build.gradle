@@ -1,0 +1,6 @@
+
+dependencies {
+    compile project(':core')
+    compile project(':ui')
+    compile ":swt:${swtVersion}-mac-x86_64"
+}
