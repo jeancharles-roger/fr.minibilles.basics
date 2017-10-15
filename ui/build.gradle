@@ -24,9 +24,9 @@ dependencies {
     linux64 "org.eclipse.swt:org.eclipse.swt.gtk.linux.x86_64:4.3"
 }
 
+/*
 publishing {
     publications {
-        /*
         mac_x86_64(MavenPublication) {
             artifactId 'ui-mac-x86-64'
 
@@ -35,9 +35,9 @@ publishing {
                 classifier "sources"
             }
         }
-        */
     }
 }
+*/
 
 def arch() {
     def arch = System.getProperty('os.arch')
