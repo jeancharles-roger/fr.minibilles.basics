@@ -25,7 +25,7 @@ dependencies {
 }
 
 publishing {
-    it.configurations.each { configuration ->
+    configurations.each { configuration ->
         if (configuration.extendsFrom.contains(configurations.baseCompile)) {
             publications.create(configuration.name, MavenPublication) {
                 artifactId "ui-${configuration.name}"
