@@ -2,3 +2,15 @@
 dependencies {
     testCompile "org.eclipse.jdt:ecj:3.12.3"
 }
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+            artifact sourceJar {
+                classifier "sources"
+            }
+
+        }
+    }
+}

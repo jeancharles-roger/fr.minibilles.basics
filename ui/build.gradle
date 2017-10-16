@@ -24,22 +24,37 @@ dependencies {
     linux64 "org.eclipse.swt:org.eclipse.swt.gtk.linux.x86_64:4.3"
 }
 
-/*
 publishing {
-    publications {
-        mac_x86_64(MavenPublication) {
-            artifactId 'ui-mac-x86-64'
+    it.configurations.each { configuration ->
+        if (configuration.extendsFrom.contains(configurations.baseCompile)) {
+            publications.create(configuration.name, MavenPublication) {
+                artifactId "ui-${configuration.name}"
 
-            from components.java
-            artifact sourceJar {
-                classifier "sources"
+                from components.java
+                artifact sourceJar {
+                    classifier "sources"
+                }
+
+                pom.withXml({
+                    def pom = it.asElement()
+                    def pomDeps = pom.getElementsByTagName('dependencies').item(0)
+                    pom.removeChild(pomDeps)
+
+                    def newDeps = it.asNode().appendNode('dependencies')
+                    configuration.allDependencies.each{ dep ->
+                        def node = newDeps.appendNode( 'dependency' )
+                        node.appendNode( 'groupId', dep.group )
+                        node.appendNode( 'artifactId', dep.name )
+                        node.appendNode( 'version', dep.version )
+                    }
+
+                })
             }
         }
     }
 }
-*/
 
-def arch() {
+static def arch() {
     def arch = System.getProperty('os.arch')
     switch (arch) {
         case "x86": case "amd": return "32"
@@ -48,6 +63,6 @@ def arch() {
     return arch
 }
 
-def platform() {
+static def platform() {
     return System.getProperty('os.name').toLowerCase().split()[0]
 }
