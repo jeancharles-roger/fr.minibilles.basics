@@ -84,14 +84,13 @@ public class ModelToSExpClassGenerator {
 		content.markImports();
 		
 		StringBuilder comment = new StringBuilder();
-		comment.append("<p>SExp writer for model '");
+		comment.append("SExp writer for model '");
 		comment.append(source.getName()); 
 		comment.append("'");
 		if ( recursive ) {
 			comment.append(" and children");
 		}
 		comment.append("."); 
-		comment.append("</p>"); 
 		content.comment(Java.JAVA_DOC, 0, comment.toString());
 		
 		content.beginClass(Java.PUBLIC, className, null, caller.getCurrentVisitorName());

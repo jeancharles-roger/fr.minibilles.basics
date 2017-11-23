@@ -226,10 +226,8 @@ public class BoostUtil {
 
 
 	/**
-	 * <p>
 	 * Writes a collection of {@link BoostObject} in the writer.
-	 * </p>
-	 * 
+	 *
 	 * @param collection
 	 *            {@link Collection} to write.
 	 */

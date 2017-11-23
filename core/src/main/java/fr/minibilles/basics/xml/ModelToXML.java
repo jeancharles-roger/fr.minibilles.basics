@@ -12,8 +12,8 @@ import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 
 /**
- * <p>A {@link ModelToXML} instance store informations for mode references.
- * It helps to create a XML representation from a model.</p>
+ * A {@link ModelToXML} instance store informations for mode references.
+ * It helps to create a XML representation from a model.
  * 
  * @author Jean-Charles Roger (jean-charles.roger@gmail.com)
  *

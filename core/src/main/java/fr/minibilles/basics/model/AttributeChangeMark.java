@@ -4,9 +4,7 @@ import java.lang.reflect.Method;
 
 
 /**
- * <p>
  * {@link ChangeMark} to save a attribute that changed.
- * </p>
  *
  * @author Jean-Charles Roger
  *

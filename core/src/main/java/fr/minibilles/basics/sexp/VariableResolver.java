@@ -4,8 +4,8 @@ import java.util.Collections;
 import java.util.Map;
 
 /**
- * <p>When translating a {@link SExp} to a model representation, a 
- * {@link VariableResolver} gives for each {@link SVariable} a value.</p>
+ * When translating a {@link SExp} to a model representation, a
+ * {@link VariableResolver} gives for each {@link SVariable} a value.
  * 
  * @author Jean-Charles Roger (jean-charles.roger@gmail.com)
  *
@@ -23,8 +23,8 @@ public interface VariableResolver {
 	
 	
 	/**
-	 * <p>Simple {@link VariableResolver} which is given a {@link Map} as
-	 * variable association.</p>
+	 * Simple {@link VariableResolver} which is given a {@link Map} as
+	 * variable association.
 	 * 
 	 * @author Jean-Charles Roger (jean-charles.roger@gmail.com)
 	 *

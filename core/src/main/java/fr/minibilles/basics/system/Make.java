@@ -13,12 +13,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * <p>
  * {@link Make} provides a simple way to handle dependencies to build
  * targets (aka files). It's directly inspired from GNU Make. From a 
  * set of rules (maybe generic) it can walk through dependencies and
  * rebuild only what it's needed.
- * </p> 
+ *
  * @author Jean-Charles Roger
  */
 public class Make {

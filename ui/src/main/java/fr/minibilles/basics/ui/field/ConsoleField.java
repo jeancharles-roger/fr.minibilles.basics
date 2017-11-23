@@ -112,7 +112,7 @@ public class ConsoleField extends AbstractField {
 	}
 	
 	/**
-	 * <p>Creates a {@link PrintWriter} that will write on view's console.</p>
+	 * Creates a {@link PrintWriter} that will write on view's console.
 	 * @param color Color to use (in {@link SWT}.COLOR_* selection only).
 	 * @param style some of the flags {@link SWT#BOLD}, {@link SWT#ITALIC}, ...
 	 * @return a {@link PrintWriter} (never null).
@@ -184,7 +184,7 @@ public class ConsoleField extends AbstractField {
 	}
 
 	/**
-	 * <p>Creates a {@link PrintWriter} that will write on view's console.</p>
+	 * Creates a {@link PrintWriter} that will write on view's console.
 	 * @return a {@link PrintWriter} (never null).
 	 */
 	public PrintWriter createPrintWriter() {

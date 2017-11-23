@@ -13,13 +13,10 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 
 /**
- * <p>
- * This generator writes into a {@link Writer} Java code for one Ecore 
+ * This generator writes into a {@link Writer} Java code for one Ecore
  * {@link EPackage} and sub packages replacer.
- * </p>
- * 
+ *
  * @author Jean-Charles Roger
- * 
  */
 public class ReplacerClassGenerator {
 
@@ -51,14 +48,13 @@ public class ReplacerClassGenerator {
 		content.markImports();
 
 		StringBuilder comment = new StringBuilder();
-		comment.append("<p>Cloner for objects in packages '");
+		comment.append("Cloner for objects in packages '");
 		comment.append(source.getName()); 
 		comment.append("'");
 		if ( recursive ) {
 			comment.append(" and children");
 		}
 		comment.append("."); 
-		comment.append("</p>"); 
 		content.comment(Java.JAVA_DOC, 0, comment.toString());
 		
 		content.beginClass(Java.PUBLIC, className, abstractCloner, visitorName);

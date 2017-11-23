@@ -22,9 +22,11 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 
 /**
- * <p>A {@link FieldWizard} proposes a {@link Shell} with multiple pages.
- * This pages are accessible by <i>Next</i> and <i>Back</i>. A wizard is ended by <i>Finish</i> or <i>Cancel</i>.</p>
- * <p>A {@link FieldWizard} is constructed with a {@link VirtualMultiPageField}.</p>
+ * A {@link FieldWizard} proposes a {@link Shell} with multiple pages.
+ * This pages are accessible by <i>Next</i> and <i>Back</i>. A wizard is ended by <i>Finish</i> or <i>Cancel</i>.
+ * <p>
+ * A {@link FieldWizard} is constructed with a {@link VirtualMultiPageField}.
+ *
  * @author Jean-Charles Roger
  */
 public abstract class FieldWizard {

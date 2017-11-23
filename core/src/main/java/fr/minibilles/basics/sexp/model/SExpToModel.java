@@ -14,9 +14,9 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * <p>{@link SExpToModel} handle reference resolving for de-serialisation. It's
+ * {@link SExpToModel} handle reference resolving for de-serialisation. It's
  * able to resolve {@link String} created by a {@link Referencer}. References 
- * can forward or backward (see {@link Referencer} for limitations).</p>
+ * can forward or backward (see {@link Referencer} for limitations).
  * 
  * @author Jean-Charles Roger (jean-charles.roger@gmail.com)
  *
@@ -24,10 +24,10 @@ import java.util.Set;
 public final class SExpToModel {
 
 	/**
-	 * <p>Private inner class that stores references for which the object isn't
+	 * Private inner class that stores references for which the object isn't
 	 * deserialized yet. When a new object is deserialized, all 
 	 * {@link PendingReference} for new object reference stored in 
-	 * {@link ContextNode} are resolved.</p> 
+	 * {@link ContextNode} are resolved.
 	 */
 	private class PendingReference {
 		final private Object receiver;
@@ -120,8 +120,8 @@ public final class SExpToModel {
 	private final Referencer referencer;
 	
 	/**
-	 * <p>Cache that stores found method used to set references. It allows to 
-	 * search only once for each reference setter.</p>
+	 * Cache that stores found method used to set references. It allows to
+	 * search only once for each reference setter.
 	 */
 	private final Map<String, Method> referenceMethodCacheMap = new HashMap<String, Method>();
 

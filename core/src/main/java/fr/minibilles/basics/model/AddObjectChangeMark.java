@@ -4,12 +4,9 @@ import java.lang.reflect.Method;
 import java.util.List;
 
 /**
- * <p>
  * {@link ChangeMark} to save a object add in a {@link List}.
- * </p>
  *
  * @author Jean-Charles Roger.
- *
  */
 public class AddObjectChangeMark extends ChangeMark {
 

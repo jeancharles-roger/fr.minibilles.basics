@@ -11,9 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <p>This is an example for file version handling with Boost.</p>
- * <p>This class is a new version of PersonV1 (and it changed it's name
- * to PersonV2. It shows how to handle old file with new version.</p>
+ * This is an example for file version handling with Boost.
+ * <p>
+ * This class is a new version of PersonV1 (and it changed it's name
+ * to PersonV2. It shows how to handle old file with new version.
+ *
  * @author Jean-Charles Roger
  */
 public class PersonV2 implements BoostObject {

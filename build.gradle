@@ -21,6 +21,15 @@ subprojects {
         from sourceSets.main.allJava
     }
 
+    javadoc {
+        options.addStringOption('Xdoclint:none', '-quiet')
+    }
+
+    task javadocJar(type: Jar, dependsOn: 'javadoc') {
+        from javadoc.destinationDir
+        classifier = 'javadoc'
+    }
+
     publishing {
         repositories {
             maven {

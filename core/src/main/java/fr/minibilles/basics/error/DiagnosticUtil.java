@@ -1,7 +1,7 @@
 package fr.minibilles.basics.error;
 
 /**
- * <p>Set of method to help {@link Diagnostic} use.</p>
+ * Set of method to help {@link Diagnostic} use.
  * @author Jean-Charles Roger
  */
 public class DiagnosticUtil {

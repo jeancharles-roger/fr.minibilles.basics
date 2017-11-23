@@ -2,7 +2,7 @@ package fr.minibilles.basics.progress;
 
 
 /**
- * <p>Defines a set of call-backs to monitors an action progress.</p>
+ * Defines a set of call-backs to monitors an action progress.
  * @author Jean-Charles Roger
  */
 public interface ActionMonitor {

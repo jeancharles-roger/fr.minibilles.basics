@@ -8,12 +8,9 @@ import org.eclipse.emf.ecore.EEnumLiteral;
 
 
 /**
- * <p>
  * TODO comments
- * </p>
  *
  * @author Jean-Charles Roger
- *
  */
 public class JavaEnumGenerator {
 	

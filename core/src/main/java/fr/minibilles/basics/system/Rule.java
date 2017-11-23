@@ -6,9 +6,9 @@ import java.io.PrintWriter;
 
 
 /**
- * <p>A {@link Rule} is able to construct a target using it's
+ * A {@link Rule} is able to construct a target using it's
  * dependencies. {@link Make}, before calling to execute the rule
- * for an identified target, it calls all dependencies.</p>
+ * for an identified target, it calls all dependencies.
  * @author Jean-Charles Roger
  */
 public interface Rule {

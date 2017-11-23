@@ -3,11 +3,9 @@ package fr.minibilles.basics.serializer;
 import fr.minibilles.basics.error.ErrorHandler;
 
 /**
- * <p>
  * A class that implements {@link Boost} is able to serialize and de-serialize {@link BoostObject} to
  * text files in UTF-8 encoding.
- * </p>
- * 
+ * <p>
  * <b>Writing example using {@link JBoost} implementation</b>
  * 
  * <pre>
@@ -17,7 +15,7 @@ import fr.minibilles.basics.error.ErrorHandler;
  * boost.writeObject(this);
  * boost.close();
  * </pre>
- * 
+ * <p>
  * <b>Reading example using {@link JBoost} implementation</b>
  * 
  * <pre>
@@ -40,16 +38,14 @@ public interface Boost {
 	public void setErrorHandler(ErrorHandler errorHandler);
 
 	/**
-	 * <p>
 	 * The current file version that is currently loading..
-	 * </p>
-	 * 
+	 *
 	 * @return the current file version.
 	 */
 	public int getFileVersion();
 
 	/**
-	 * <p> Registers a read object from the constructor.</p>
+	 *  Registers a read object from the constructor.
 	 * @param object the referred object.
 	 */
 	public void register(BoostObject object);

@@ -135,7 +135,6 @@ public abstract class TreeController<I, E, GE> {
 	 * Expands a graphical element in the tree.
 	 * @param item the item to expand
 	 * @param scroll if true, scroll the view to show the item
-	 * @return the list of tree items that match the path
 	 */
 	public void show(GE item, boolean scroll) {
 		GE current =  getParentItem(item);

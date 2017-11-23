@@ -8,25 +8,19 @@ import java.util.TreeSet;
 
 
 /**
- * <p>
  * This class handles the generation dependencies. It includes:
- * </p>
- * 
+ *
  * @author Jean-Charles Roger
  */
 public class DependencyManager {
 
 	/**
-	 * <p>
 	 * Set of all imports.
-	 * </p>
 	 */
 	protected final Set<String> imports = new TreeSet<String>();
 
 	/**
-	 * <p>
 	 * Short name map for import.
-	 * </p>
 	 */
 	protected final Map<String, String> shortNameImport = new HashMap<String, String>();
 
@@ -47,11 +41,9 @@ public class DependencyManager {
 	}
 	
 	/**
-	 * <p>
 	 * Returns the corresponding short name for given fully qualified name. The first a qualified name is given, it registers
 	 * it in {@link #imports} to add all imports at the end of the template generation process.
-	 * </p>
-	 * 
+	 *
 	 * @param qualifiedName concerned classifier.
 	 * @return the short name of the Java Class.
 	 */
@@ -84,10 +76,8 @@ public class DependencyManager {
 	}
 
 	/**
-	 * <p>
 	 * Retrieves the list of imports separated by ' '.
-	 * </p>
-	 * 
+	 *
 	 * @return a list of qualified name to import as
 	 */
 	public String getSpaceSeparedImports() {
@@ -99,9 +89,8 @@ public class DependencyManager {
 	}
 
 	/**
-	 * <p>
 	 * Retrieves the list of imports as Java imports.
-	 * </p>
+	 *
 	 * @return a set of import declaration.
 	 */
 	public String[] getJavaImports() {

@@ -31,9 +31,8 @@ publishing {
                 artifactId "ui-${configuration.name}"
 
                 from components.java
-                artifact sourceJar {
-                    classifier "sources"
-                }
+                artifact sourceJar { classifier "sources" }
+                artifact javadocJar { classifier "javadoc" }
 
                 pom.withXml({
                     def pom = it.asElement()

@@ -12,7 +12,7 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Cursor;
 
 /**
- * <p>Simple interaction object to move point's of an element.<.p>
+ * Simple interaction object to move point's of an element.
  * @author Jean-Charles Roger (original from Didier Simoneau)
  *
  */

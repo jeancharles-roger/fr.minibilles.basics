@@ -552,8 +552,8 @@ public final class DiagramController implements DiagramContext {
 	}
 	
 	/**
-	 * <p>Set for a button number if it triggers the move.</p> 
-	 * <p>1 is left button, 2 middle and 3 right.</p>
+	 * Set for a button number if it triggers the move.
+	 * 1 is left button, 2 middle and 3 right.
 	 */
 	public void setMovingButton(int number, boolean moving) {
 		movingButtons[number] = moving;
@@ -797,11 +797,12 @@ public final class DiagramController implements DiagramContext {
 	}
 
 	/**
-	 * <p>Searches if selected elements still exist in diagram. If it's not the
+ *     Searches if selected elements still exist in diagram. If it's not the
 	 * case, it tries to find the new elements from the model they represent. It
-	 * assures that all selected elements are diagram elements.</p>
-	 * <p>It's called by {@link #refreshElements(boolean)} (with rebuild at 
-	 * true).</p>
+	 * assures that all selected elements are diagram elements.
+	 * <p>
+ *     It's called by {@link #refreshElements(boolean)} (with rebuild at
+	 * true).
 	 */
 	public void findSelectionNewElements() {
 		final int size = getSelectedElements().size();

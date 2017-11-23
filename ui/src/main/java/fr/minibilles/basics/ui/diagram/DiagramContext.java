@@ -9,7 +9,7 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Control;
 
 /**
- * <p>A {@link DiagramContext} is given to all diagram methods.</p>
+ * A {@link DiagramContext} is given to all diagram methods.
  * 
  * @author Jean-Charles Roger (original from Didier Simoneau).
  */
@@ -114,13 +114,13 @@ public interface DiagramContext {
 	void removeInteractionObject(InteractionObject object);
 
 	/**
-	 * <p>Refreshes the diagram elements.</p>
+	 * Refreshes the diagram elements.
 	 * @param rebuild if true it will first rebuild the diagram.
 	 */
 	void refreshElements(boolean rebuild);
 	
 	/**
-	 * <p>Refreshes the diagram interactions.</p>
+	 * Refreshes the diagram interactions.
 	 */
 	void refreshInteractions();
 	

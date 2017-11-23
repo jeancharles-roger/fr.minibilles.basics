@@ -70,9 +70,9 @@ public abstract class SourceCode implements CompletionProposer {
 	}
 
 	/** 
-	 * <p>Handles a group (separator) to create an {@link SourceCodeElement} 
+	 * Handles a group (separator) to create an {@link SourceCodeElement}
 	 * (must be added using {@link #addSourceCodeElement(SourceCodeElement)}).
-	 * </p>
+	 *
 	 * @param lastIndex 
 	 * 		It contains the index in the source code where {@link SourceCodeElement}
 	 * 		analysis stops. The next element must start with this index.

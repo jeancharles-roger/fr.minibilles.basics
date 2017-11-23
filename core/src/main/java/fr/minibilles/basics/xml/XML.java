@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public class XML {
 
 	/**
-	 * <p>Transforms a <b>Enum</b> attribute to {@link String}.</p>
+	 * Transforms a <b>Enum</b> attribute to {@link String}.
 	 * @param value attribute value
 	 * @return the {@link String}.
 	 */
@@ -14,7 +14,7 @@ public class XML {
 	}
 	
 	/**
-	 * </p> Extract a <b>Enum</b> from a {@link String}.</p>
+	 * Extract a <b>Enum</b> from a {@link String}.
 	 * @param string source
 	 * @return the extracted value
 	 */
@@ -23,7 +23,7 @@ public class XML {
 	}
 	
 	/**
-	 * <p>Transforms a <b>Character</b> attribute to {@link String}.</p>
+	 * Transforms a <b>Character</b> attribute to {@link String}.
 	 * @param value attribute value
 	 * @return the {@link String}.
 	 */
@@ -32,7 +32,7 @@ public class XML {
 	}
 	
 	/**
-	 * </p> Extract a <b>Character</b> from a {@link String}.</p>
+	 * Extract a <b>Character</b> from a {@link String}.
 	 * @param string source
 	 * @return the extracted value
 	 */
@@ -41,7 +41,7 @@ public class XML {
 	}
 	
 	/**
-	 * <p>Transforms a <b>int</b> attribute to {@link String}.</p>
+	 * Transforms a <b>int</b> attribute to {@link String}.
 	 * @param value attribute value
 	 * @return the {@link String}.
 	 */
@@ -50,7 +50,7 @@ public class XML {
 	}
 	
 	/**
-	 * </p> Extract a <b>int</b> from a {@link String}.</p>
+	 * Extract a <b>int</b> from a {@link String}.
 	 * @param string source
 	 * @return the extracted value
 	 */
@@ -59,7 +59,7 @@ public class XML {
 	}
 
 	/**
-	 * <p>Transforms a <b>Integer</b> attribute to {@link String}.</p>
+	 * Transforms a <b>Integer</b> attribute to {@link String}.
 	 * @param value attribute value
 	 * @return the {@link String}.
 	 */
@@ -68,7 +68,7 @@ public class XML {
 	}
 	
 	/**
-	 * </p> Extract a <b>Integer</b> from a {@link String}.</p>
+	 *  Extract a <b>Integer</b> from a {@link String}.
 	 * @param string source
 	 * @return the extracted value
 	 */
@@ -77,7 +77,7 @@ public class XML {
 	}
 	
 	/**
-	 * <p>Transforms a <b>long</b> attribute to {@link String}.</p>
+	 * Transforms a <b>long</b> attribute to {@link String}.
 	 * @param value attribute value
 	 * @return the {@link String}.
 	 */
@@ -86,7 +86,7 @@ public class XML {
 	}
 	
 	/**
-	 * </p> Extract a <b>long</b> from a {@link String}.</p>
+	 * Extract a <b>long</b> from a {@link String}.
 	 * @param string source
 	 * @return the extracted value
 	 */
@@ -95,7 +95,7 @@ public class XML {
 	}
 	
 	/**
-	 * <p>Transforms a <b>Integer</b> attribute to {@link String}.</p>
+	 * Transforms a <b>Integer</b> attribute to {@link String}.
 	 * @param value attribute value
 	 * @return the {@link String}.
 	 */
@@ -105,7 +105,7 @@ public class XML {
 
 
 	/**
-	 * </p> Extract a <b>Integer</b> from a {@link String}.</p>
+	 * Extract a <b>Integer</b> from a {@link String}.
 	 * @param string source
 	 * @return the extracted value
 	 */
@@ -115,7 +115,7 @@ public class XML {
 	
 
 	/**
-	 * </p> Extract a <b>BigDecimal</b> from a {@link String}.</p>
+	 * Extract a <b>BigDecimal</b> from a {@link String}.
 	 * @param string source
 	 * @return the extracted value
 	 */
@@ -124,7 +124,7 @@ public class XML {
 	}
 	
 	/**
-	 * <p>Transforms a <b>BigDecimal</b> attribute to {@link String}.</p>
+	 * Transforms a <b>BigDecimal</b> attribute to {@link String}.
 	 * @param value attribute value
 	 * @return the {@link String}.
 	 */
@@ -134,7 +134,7 @@ public class XML {
 
 
 	/**
-	 * </p> Extract a <b>boolean</b> from a {@link String}.</p>
+	 * Extract a <b>boolean</b> from a {@link String}.
 	 * @param string source
 	 * @return the extracted value
 	 */
@@ -143,7 +143,7 @@ public class XML {
 	}
 
 	/**
-	 * <p>Transforms a <b>boolean</b> attribute to {@link String}.</p>
+	 * Transforms a <b>boolean</b> attribute to {@link String}.
 	 * @param value attribute value
 	 * @return the {@link String}.
 	 */
@@ -153,7 +153,7 @@ public class XML {
 
 
 	/**
-	 * <p>Transforms a <b>float</b> attribute to {@link String}.</p>
+	 * Transforms a <b>float</b> attribute to {@link String}.
 	 * @param value attribute value
 	 * @return the {@link String}.
 	 */
@@ -162,7 +162,7 @@ public class XML {
 	}
 	
 	/**
-	 * </p> Extract a <b>float</b> from a {@link String}.</p>
+	 * Extract a <b>float</b> from a {@link String}.
 	 * @param string source
 	 * @return the extracted value
 	 */

@@ -10,14 +10,11 @@ import org.eclipse.emf.ecore.EPackage;
 
 
 /**
- * <p>
- * This generator writes into a {@link Writer} Java code for one Ecore 
+ * This generator writes into a {@link Writer} Java code for one Ecore
  * {@link EPackage} and sub packages as a visitor interface for the basic 
  * framework.
- * </p>
- * 
+ *
  * @author Jean-Charles Roger
- * 
  */
 public class VisitorInterfaceGenerator {
 
@@ -39,15 +36,14 @@ public class VisitorInterfaceGenerator {
 		content.markImports();
 		
 		StringBuilder comment = new StringBuilder();
-		comment.append("<p>Visitor interface for package '");
+		comment.append("Visitor interface for package '");
 		comment.append(source.getName()); 
 		comment.append("'");
 		if ( recursive ) {
 			comment.append(" and sub packages");
 		}
 		comment.append(".");
-		comment.append("</p>"); 
-		
+
 		content.comment(Java.JAVA_DOC, 0, comment.toString());
 		content.beginInterface(Java.PUBLIC, className, null);
 
@@ -86,14 +82,13 @@ public class VisitorInterfaceGenerator {
 
 	protected void generateStub(EPackage source, JavaContentHandler content) {
 		StringBuilder comment = new StringBuilder();
-		comment.append("<p>Empty visitor implementation for package '");
+		comment.append("Empty visitor implementation for package '");
 		comment.append(source.getName()); 
 		comment.append("'");
 		if ( recursive ) {
 			comment.append(" and sub packages");
 		}
 		comment.append(".");
-		comment.append("</p>"); 
 		content.comment(Java.JAVA_DOC, 0, comment.toString());
 		
 		String className = caller.getDependencyManager().getShortName(caller.getVisitorQualifiedName(source));

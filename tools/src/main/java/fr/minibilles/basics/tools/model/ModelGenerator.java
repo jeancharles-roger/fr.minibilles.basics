@@ -32,11 +32,9 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 
 /**
- * <p>
  * Handles the generation of a whole ecore file. Not all ecore construction are
  * implemented.
- * </p>
- * 
+ *
  * @author Jean-Charles Roger
  * 
  */
@@ -535,7 +533,7 @@ public class ModelGenerator extends GeneratorEntryPoint {
 	}
 	
 	/** 
-	 * <p>Returns the feature Java name.</p> 
+	 * Returns the feature Java name.
 	 * @param feature to use
 	 * @return a the feature Java (not a safe name).
 	 */
@@ -548,11 +546,9 @@ public class ModelGenerator extends GeneratorEntryPoint {
 	}
 
 	/**
-	 * <p>
 	 * Returns the Java class name from a {@link ETypedElement}, taking in
 	 * account bounds and order.
-	 * </p>
-	 * 
+	 *
 	 * @param element
 	 *            {@link ETypedElement} to analyze.
 	 * @return a fully qualified Java class.
@@ -574,16 +570,12 @@ public class ModelGenerator extends GeneratorEntryPoint {
 	}
 	
 	/**
-	 * <p>
 	 * Returns the Java class name from an {@link EClassifier} and it's
 	 * corresponding {@link EGenericType}.
-	 * </p>
-	 * 
 	 * <p>
 	 * It returns the simple name and registers the to the
 	 * {@link DependencyManager}.
-	 * </p>
-	 * 
+	 *
 	 * @param eClassifier
 	 *            {@link EClassifier} to analyze.
 	 * @param eGenericType
@@ -623,10 +615,8 @@ public class ModelGenerator extends GeneratorEntryPoint {
 
 	
 	/**
-	 * <p>
 	 * Creates the type parameter declaration from one {@link EGenericType}.
-	 * </p>
-	 * 
+	 *
 	 * @param eGenericType to be declared
 	 * @return the declaration {@link String}, may by empty, never null.
 	 */
@@ -671,10 +661,8 @@ public class ModelGenerator extends GeneratorEntryPoint {
 	}
 	
 	/**
-	 * <p>
 	 * Generates a JavaDoc for given element.
-	 * </p>
-	 * 
+	 *
 	 * @param addition added at the beginning of the documentation.
 	 * @param element
 	 *            a {@link EModelElement}.
@@ -685,20 +673,16 @@ public class ModelGenerator extends GeneratorEntryPoint {
 		StringBuilder comments = new StringBuilder();
 		String documentation = getDocumentation(element);
 		if ( addition != null ) {
-			comments.append("<p>");
 			comments.append(addition);
-			comments.append("</p>");
 			comments.append(NL);
 		}
 		if (documentation != null) {
-			comments.append("<p>");
 			if ( element instanceof ENamedElement ) {
 				comments.append("<b>");
 				comments.append(((ENamedElement) element).getName());
 				comments.append("</b>: ");
 			}
 			comments.append(documentation);
-			comments.append("</p>");
 			comments.append(NL);
 		}
 		if (generatedAnnotation && isUseGeneratedAnnotation()) {

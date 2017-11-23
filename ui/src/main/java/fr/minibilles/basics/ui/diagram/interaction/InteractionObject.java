@@ -24,8 +24,8 @@ public interface InteractionObject extends Displayable {
 	void setType(int type);
 	
 	/** 
-	 * <p>Returns one of {@link Geometry} direction to indicate it's relative
-	 * position from it's owning the element.</p>
+	 * Returns one of {@link Geometry} direction to indicate it's relative
+	 * position from it's owning the element.
 	 */
 	int getIndex();
 	

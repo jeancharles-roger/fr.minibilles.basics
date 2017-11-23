@@ -6,8 +6,8 @@ package fr.minibilles.basics.generation.java;
 import java.io.File;
 
 /**
- * <p>This interface proposes methods to handle Java Content in event based
- * mode (as SAX does).</p>
+ * This interface proposes methods to handle Java Content in event based
+ * mode (as SAX does).
  * 
  * @author Jean-Charles Roger
  */
@@ -19,14 +19,14 @@ public interface JavaContentHandler {
 	void endPackage(String name);
 
 	/** 
-	 * <p>Starts a textual file. If file name ends with '.java' (case ignored)
-	 * it will considered as a Java file.</p>
+	 * Starts a textual file. If file name ends with '.java' (case ignored)
+	 * it will considered as a Java file.
 	 * @param name file name, must be a valid file name.
 	 */
 	void beginFile(String name);
 	
 	/**
-	 * <p>Ends a textual file.</p>
+	 * Ends a textual file.
 	 * @param name file name must be a valid file name.
 	 */
 	void endFile(String name);
@@ -35,9 +35,9 @@ public interface JavaContentHandler {
 	void markImports();
 	
 	/**
-	 * <p>Adds an import declaration to file. If {@link #markImports()} has
+	 * Adds an import declaration to file. If {@link #markImports()} has
 	 * been called, it will be inserted at the mark, if not at current place
-	 * in file.</p>
+	 * in file.
 	 * 
 	 * @param flags import flags, can be {@link Java#STATIC} or  {@link Java#NONE}.
 	 * @param importString fully qualified name to import.
@@ -45,17 +45,17 @@ public interface JavaContentHandler {
 	void import_(int flags, String importString);
 	
 	/**
-	 * <p>Starts a Java class, it must be inside a file (between a 
-	 * {@link #beginFile(String)} and an {@link #endFile(String)}).</p>
-	 * <p>Possible flags for a class are combination of:
+	 * Starts a Java class, it must be inside a file (between a
+	 * {@link #beginFile(String)} and an {@link #endFile(String)}).
+	 * <p>
+	 *     Possible flags for a class are combination of:
 	 * <ul>
 	 * <li>{@link Java#ABSTRACT} or {@link Java#FINAL}</li>
 	 * <li>{@link Java#STATIC}</li>
-	 * <li>{@link Java#PRIVATE}, {@link Java#PROTECTED} or {@link Java#PUBLIC}</li>
-	 * or 
+	 * <li>{@link Java#PRIVATE}, {@link Java#PROTECTED} or {@link Java#PUBLIC}, or</li>
 	 * <li>{@link Java#NONE}</li>
 	 * </ul>
-	 * </p>
+	 *
 	 * 
 	 * @param flags the class flags combination.
 	 * @param name the class name, must be a valid Java class name. Can't be
@@ -68,7 +68,7 @@ public interface JavaContentHandler {
 	void beginClass(int flags, String name, String parentClass, String implementedInterfaces);
 	
 	/**
-	 * <p>Ends of a Java class.</p>
+	 * Ends of a Java class.
 	 * @param name the class name, must be a valid Java class name. Can't be
 	 * 	null.
 	 */
@@ -98,7 +98,7 @@ public interface JavaContentHandler {
 	void code(String code);
 	
 	/**
-	 * <p>Appends a comment.</p>
+	 * Appends a comment.
 	 * @param flags comment flag, must be one of {@link Java#SINGLE_LINE}, 
 	 * 	{@link Java#MULTI_LINE} or {@link Java#JAVA_DOC} 
 	 * @param level tabulation level.
@@ -107,16 +107,16 @@ public interface JavaContentHandler {
 	void comment(int flags, int level, String comment);
 	
 	/**
-	 * <p>Copy given file to current location. File is treated as binary file.
-	 * It can be used for image resources for instance.</p>
+	 * Copy given file to current location. File is treated as binary file.
+	 * It can be used for image resources for instance.
 	 * 
 	 * @param file file to copy
 	 */
 	void binaryFile(File file);
 
 	/**
-	 * <p>Copy given file to current doc-files location. File is treated as 
-	 * binary file. It allow to add specific resources for JavaDoc.</p>
+	 * Copy given file to current doc-files location. File is treated as
+	 * binary file. It allow to add specific resources for JavaDoc.
 	 * 
 	 * @param file file to copy
 	 */

@@ -2,18 +2,13 @@ package fr.minibilles.basics.model;
 
 
 /**
- * <p>
  * Interface for all change handlers.
- * </p>
  *
  * @author Jean-Charles Roger.
- *
  */
 public interface ChangeHandler {
 	/**
-	 * <p>
 	 * Undo last transaction.
-	 * </p>
 	 */
 	public void undo();
 	
@@ -23,9 +18,7 @@ public interface ChangeHandler {
 	public boolean canUndo();
 	
 	/**
-	 * <p>
 	 * Redo last undone transaction.
-	 * </p>
 	 */
 	public void redo();
 	
@@ -40,9 +33,7 @@ public interface ChangeHandler {
 	public long getTimestamp();
 
 	/**
-	 * <p>
 	 * Add a new transaction marker in the changes.
-	 * </p>
 	 */
 	public void newOperation();
 		

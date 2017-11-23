@@ -13,13 +13,13 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
 /**
- * <p>Static methods to execute a command and redirects its i/o.</p>
+ * Static methods to execute a command and redirects its i/o.
  * @author Jean-Charles Roger
  */
 public class BatchCommand {
 	
 	/**
-	 * <p>Executes command and redirect its outputs to outWriter and errWriter.</p>
+	 * Executes command and redirect its outputs to outWriter and errWriter.
 	 * @param command command to execute.
 	 * @param outWriter writer for standard output.
 	 * @param errWriter writer for error output.
@@ -30,7 +30,7 @@ public class BatchCommand {
 	}
 
 	/**
-	 * <p>Executes command and redirect its outputs to outWriter and errWriter.</p>
+	 * Executes command and redirect its outputs to outWriter and errWriter.
 	 * @param command command to execute.
 	 * @param workingDir working directory for command.
 	 * @param outWriter writer for standard output.
@@ -42,7 +42,7 @@ public class BatchCommand {
 	}
 	
 	/**
-	 * <p>Executes command and redirect its outputs to outWriter and errWriter.</p>
+	 * Executes command and redirect its outputs to outWriter and errWriter.
 	 * @param command command to execute.
 	 * @param workingDir working directory for command.
 	 * @param outWriter writer for standard output.
@@ -56,7 +56,7 @@ public class BatchCommand {
 	}
 	
 	/**
-	 * <p>Executes command and redirect its outputs to outWriter and errWriter.</p>
+	 * Executes command and redirect its outputs to outWriter and errWriter.
 	 * @param command command to execute.
 	 * @param workingDir working directory for command.
 	 * @param env environment variable to add to process. A variable is represented by two 

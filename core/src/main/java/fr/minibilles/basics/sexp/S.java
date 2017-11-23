@@ -8,7 +8,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * <p>This class contains shortcuts to create {@link SExp} elements.</p>
+ * This class contains shortcuts to create {@link SExp} elements.
  * 
  * @author Jean-Charles Roger (jean-charles.roger@gmail.com)
  *
@@ -125,7 +125,7 @@ public class S {
 	
 	
 	/**
-	 * <p>Transforms a <b>Enum</b> attribute to {@link SExp}.</p>
+	 * Transforms a <b>Enum</b> attribute to {@link SExp}.
 	 * @param name attribute name
 	 * @param value attribute value
 	 * @return the {@link SExp}.
@@ -141,7 +141,7 @@ public class S {
 	}
 	
 	/**
-	 * </p> Extract a <b>Enum</b> from a {@link SExp}.</p>
+	 * Extract a <b>Enum</b> from a {@link SExp}.
 	 * @param sexp source
 	 * @return the extracted value
 	 */
@@ -156,7 +156,7 @@ public class S {
 	
 	
 	/**
-	 * <p>Transforms a <b>Collection&lt;Enul&gt;</b> attribute to {@link SExp}.</p>
+	 * Transforms a <b>Collection&lt;Enul&gt;</b> attribute to {@link SExp}.
 	 * @param name attribute name
 	 * @param value attribute value
 	 * @return the {@link SExp}.
@@ -175,7 +175,7 @@ public class S {
 	}
 	
 	/**
-	 * </p> Extract a <b>Collection&lt;StriCollectiont;</b> from a {@link SExp}.</p>
+	 * Extract a <b>Collection&lt;StriCollectiont;</b> from a {@link SExp}.
 	 * @param sexp source
 	 * @return the extracted value
 	 */
@@ -194,7 +194,7 @@ public class S {
 	
 	
 	/**
-	 * <p>Transforms a <b>String</b> attribute to {@link SExp}.</p>
+	 * Transforms a <b>String</b> attribute to {@link SExp}.
 	 * @param name attribute name
 	 * @param value attribute value
 	 * @return the {@link SExp}.
@@ -210,7 +210,7 @@ public class S {
 	}
 	
 	/**
-	 * </p> Extract a <b>String</b> from a {@link SExp}.</p>
+	 *  Extract a <b>String</b> from a {@link SExp}.
 	 * @param sexp source
 	 * @return the extracted value
 	 */
@@ -224,7 +224,7 @@ public class S {
 	}
 	
 	/**
-	 * <p>Transforms a <b>Character</b> attribute to {@link SExp}.</p>
+	 * Transforms a <b>Character</b> attribute to {@link SExp}.
 	 * @param name attribute name
 	 * @param value attribute value
 	 * @return the {@link SExp}.
@@ -240,7 +240,7 @@ public class S {
 	}
 	
 	/**
-	 * </p> Extract a <b>Character</b> from a {@link SExp}.</p>
+	 *  Extract a <b>Character</b> from a {@link SExp}.
 	 * @param sexp source
 	 * @return the extracted value
 	 */
@@ -254,7 +254,7 @@ public class S {
 	}
 	
 	/**
-	 * <p>Transforms a <b>Collection&lt;String&gt;</b> attribute to {@link SExp}.</p>
+	 * Transforms a <b>Collection&lt;String&gt;</b> attribute to {@link SExp}.
 	 * @param name attribute name
 	 * @param value attribute value
 	 * @return the {@link SExp}.
@@ -273,7 +273,7 @@ public class S {
 	}
 	
 	/**
-	 * </p> Extract a <b>Collection&lt;StriCollectiont;</b> from a {@link SExp}.</p>
+	 *  Extract a <b>Collection&lt;StriCollectiont;</b> from a {@link SExp}.
 	 * @param sexp source
 	 * @return the extracted value
 	 */
@@ -291,7 +291,7 @@ public class S {
 	}
 	
 	/**
-	 * <p>Transforms a <b>File</b> attribute to {@link SExp}.</p>
+	 * Transforms a <b>File</b> attribute to {@link SExp}.
 	 * @param name attribute name
 	 * @param value attribute value
 	 * @return the {@link SExp}.
@@ -310,7 +310,7 @@ public class S {
 	}
 
 	/**
-	 * </p> Extract a <b>File</b> from a {@link SExp}.</p>
+	 *  Extract a <b>File</b> from a {@link SExp}.
 	 * @param sexp source
 	 * @return the extracted value
 	 */
@@ -326,7 +326,7 @@ public class S {
 	}
 
 	/**
-	 * <p>Transforms a <b>Collection&lt;File&gt;</b> attribute to {@link SExp}.</p>
+	 * Transforms a <b>Collection&lt;File&gt;</b> attribute to {@link SExp}.
 	 * @param name attribute name
 	 * @param value attribute value
 	 * @return the {@link SExp}.
@@ -347,7 +347,7 @@ public class S {
 	}
 
 	/**
-	 * </p> Extract a <b>Collection&lt;String&gt;</b> from a {@link SExp}.</p>
+	 *  Extract a <b>Collection&lt;String&gt;</b> from a {@link SExp}.
 	 * @param sexp source
 	 * @return the extracted value
 	 */
@@ -367,7 +367,7 @@ public class S {
 	}
 	
 	/**
-	 * <p>Transforms a <b>int</b> attribute to {@link SExp}.</p>
+	 * Transforms a <b>int</b> attribute to {@link SExp}.
 	 * @param name attribute name
 	 * @param value attribute value
 	 * @return the {@link SExp}.
@@ -380,7 +380,7 @@ public class S {
 	}
 	
 	/**
-	 * </p> Extract a <b>int</b> from a {@link SExp}.</p>
+	 *  Extract a <b>int</b> from a {@link SExp}.
 	 * @param sexp source
 	 * @return the extracted value
 	 */
@@ -389,7 +389,7 @@ public class S {
 	}
 
 	/**
-	 * <p>Transforms a <b>int[]</b> attribute to {@link SExp}.</p>
+	 * Transforms a <b>int[]</b> attribute to {@link SExp}.
 	 * @param name attribute name
 	 * @param value attribute value
 	 * @return the {@link SExp}.
@@ -408,7 +408,7 @@ public class S {
 	}
 	
 	/**
-	 * </p> Extract a <b>int[]</b> from a {@link SExp}.</p>
+	 *  Extract a <b>int[]</b> from a {@link SExp}.
 	 * @param sexp source
 	 * @return the extracted value
 	 */
@@ -427,7 +427,7 @@ public class S {
 	
 	
 	/**
-	 * <p>Transforms a <b>long</b> attribute to {@link SExp}.</p>
+	 * Transforms a <b>long</b> attribute to {@link SExp}.
 	 * @param name attribute name
 	 * @param value attribute value
 	 * @return the {@link SExp}.
@@ -440,7 +440,7 @@ public class S {
 	}
 	
 	/**
-	 * </p> Extract a <b>long</b> from a {@link SExp}.</p>
+	 *  Extract a <b>long</b> from a {@link SExp}.
 	 * @param sexp source
 	 * @return the extracted value
 	 */
@@ -449,7 +449,7 @@ public class S {
 	}
 	
 	/**
-	 * <p>Transforms a <b>long[]</b> attribute to {@link SExp}.</p>
+	 * Transforms a <b>long[]</b> attribute to {@link SExp}.
 	 * @param name attribute name
 	 * @param value attribute value
 	 * @return the {@link SExp}.
@@ -468,7 +468,7 @@ public class S {
 	}
 	
 	/**
-	 * </p> Extract a <b>long[]</b> from a {@link SExp}.</p>
+	 *  Extract a <b>long[]</b> from a {@link SExp}.
 	 * @param sexp source
 	 * @return the extracted value
 	 */
@@ -486,7 +486,7 @@ public class S {
 	}
 	
 	/**
-	 * <p>Transforms a <b>Integer</b> attribute to {@link SExp}.</p>
+	 * Transforms a <b>Integer</b> attribute to {@link SExp}.
 	 * @param name attribute name
 	 * @param value attribute value
 	 * @return the {@link SExp}.
@@ -500,7 +500,7 @@ public class S {
 
 
 	/**
-	 * </p> Extract a <b>Integer</b> from a {@link SExp}.</p>
+	 *  Extract a <b>Integer</b> from a {@link SExp}.
 	 * @param sexp source
 	 * @return the extracted value
 	 */
@@ -509,7 +509,7 @@ public class S {
 	}
 	
 	/**
-	 * <p>Transforms a <b>Collection&lt;Integer&gt;</b> attribute to {@link SExp}.</p>
+	 * Transforms a <b>Collection&lt;Integer&gt;</b> attribute to {@link SExp}.
 	 * @param name attribute name
 	 * @param value attribute value
 	 * @return the {@link SExp}.
@@ -528,7 +528,7 @@ public class S {
 	}
 	
 	/**
-	 * </p> Extract a <b>List&lt;Integer&gt;</b> from a {@link SExp}.</p>
+	 *  Extract a <b>List&lt;Integer&gt;</b> from a {@link SExp}.
 	 * @param sexp source
 	 * @return the extracted value
 	 */
@@ -546,7 +546,7 @@ public class S {
 	}
 
 	/**
-	 * </p> Extract a <b>BigDecimal</b> from a {@link SExp}.</p>
+	 *  Extract a <b>BigDecimal</b> from a {@link SExp}.
 	 * @param sexp source
 	 * @return the extracted value
 	 */
@@ -560,7 +560,7 @@ public class S {
 	}
 	
 	/**
-	 * <p>Transforms a <b>BigDecimal</b> attribute to {@link SExp}.</p>
+	 * Transforms a <b>BigDecimal</b> attribute to {@link SExp}.
 	 * @param name attribute name
 	 * @param value attribute value
 	 * @return the {@link SExp}.
@@ -574,7 +574,7 @@ public class S {
 
 
 	/**
-	 * </p> Extract a <b>boolean</b> from a {@link SExp}.</p>
+	 *  Extract a <b>boolean</b> from a {@link SExp}.
 	 * @param sexp source
 	 * @return the extracted value
 	 */
@@ -583,7 +583,7 @@ public class S {
 	}
 
 	/**
-	 * <p>Transforms a <b>boolean</b> attribute to {@link SExp}.</p>
+	 * Transforms a <b>boolean</b> attribute to {@link SExp}.
 	 * @param name attribute name
 	 * @param value attribute value
 	 * @return the {@link SExp}.
@@ -596,7 +596,7 @@ public class S {
 	}
 
 	/**
-	 * <p>Transforms a <b>boolean[]</b> attribute to {@link SExp}.</p>
+	 * Transforms a <b>boolean[]</b> attribute to {@link SExp}.
 	 * @param name attribute name
 	 * @param value attribute value
 	 * @return the {@link SExp}.
@@ -616,7 +616,7 @@ public class S {
 
 
 	/**
-	 * </p> Extract a <b>boolean[]</b> from a {@link SExp}.</p>
+	 *  Extract a <b>boolean[]</b> from a {@link SExp}.
 	 * @param sexp source
 	 * @return the extracted value
 	 */
@@ -635,7 +635,7 @@ public class S {
 
 
 	/**
-	 * <p>Transforms a <b>float</b> attribute to {@link SExp}.</p>
+	 * Transforms a <b>float</b> attribute to {@link SExp}.
 	 * @param name attribute name
 	 * @param value attribute value
 	 * @return the {@link SExp}.
@@ -648,7 +648,7 @@ public class S {
 	}
 	
 	/**
-	 * </p> Extract a <b>float</b> from a {@link SExp}.</p>
+	 *  Extract a <b>float</b> from a {@link SExp}.
 	 * @param sexp source
 	 * @return the extracted value
 	 */
@@ -657,7 +657,7 @@ public class S {
 	}
 	
 	/**
-	 * <p>Transforms a <b>float[]</b> attribute to {@link SExp}.</p>
+	 * Transforms a <b>float[]</b> attribute to {@link SExp}.
 	 * @param name attribute name
 	 * @param value attribute value
 	 * @return the {@link SExp}.
@@ -676,7 +676,7 @@ public class S {
 	}
 	
 	/**
-	 * </p> Extract a <b>float[]</b> from a {@link SExp}.</p>
+	 *  Extract a <b>float[]</b> from a {@link SExp}.
 	 * @param sexp source
 	 * @return the extracted value
 	 */

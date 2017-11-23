@@ -6,13 +6,13 @@ package fr.minibilles.basics.ui.diagram;
 import fr.minibilles.basics.ui.diagram.gc.GC;
 
 /**
- * <p>Displayable object.</p>
+ * Displayable object.
  * @author Jean-Charles Roger (original from Didier Simoneau)
  */
 public interface Displayable {
 
 	/**
-	 * <p>Display this on given GC.</p>
+	 * Display this on given GC.
 	 * 
 	 * @param gc {@link GC} where to display this.
 	 * @param context the {@link DiagramContext} to provide information on context.

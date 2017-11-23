@@ -12,15 +12,16 @@ import fr.minibilles.basics.ui.field.CompositeField;
 import fr.minibilles.basics.ui.field.Field;
 
 /**
- * <p>A {@link Controller} handles a set of {@link Field} for one specific object.</p>
- * <p>It handles it using 3 methods:
+ * A {@link Controller} handles a set of {@link Field} for one specific object.
+ * <p>
+ * It handles it using 3 methods:
  * <ul>
  * <li>{@link #createFields()} which provides the {@link Field}s to edit the subject</li>
  * <li>{@link #refreshFields()} which refreshes the fields (UI part) using the subject and</li>
  * <li>{@link #updateSubject(Field)} which updates the subject upon the {@link Field}s
  * modifications</li>
  * </ul>
- * </p> 
+ *
  * @author Jean-Charles Roger
  */
 public abstract class Controller<T> {

@@ -15,7 +15,7 @@ public class PlatformUtil {
 	private final static String FullscreenUtilClassName = "fr.minibilles.basics.ui.cocoa.FullscreenUtil";
 	
 	/**
-	 * <p>Registers the name for a Cocoa application, it's about and preferences action.</p>
+	 * Registers the name for a Cocoa application, it's about and preferences action.
 	 * @param name App name
 	 * @param aboutAction about action
 	 * @param preferencesAction preferences actions.

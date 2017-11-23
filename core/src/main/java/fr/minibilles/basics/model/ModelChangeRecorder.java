@@ -5,11 +5,9 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * <p>
  * This {@link ChangeRecorder} records all changes in a {@link Stack} of
  * {@link ChangeMark}.
- * </p>
- * 
+ *
  * @author Jean-Charles Roger.
  * 
  */
@@ -94,10 +92,8 @@ public class ModelChangeRecorder implements ChangeRecorder {
 	}
 	
 	/**
-	 * <p>
 	 * Returns the {@link List} of commands to undo in the order to be undone.
-	 * </p>
-	 * 
+	 *
 	 * @return a {@link List} of {@link ChangeMark}.
 	 */
 	protected List<ChangeMark> getChangesToUndo() {
@@ -143,10 +139,8 @@ public class ModelChangeRecorder implements ChangeRecorder {
 	}
 
 	/**
-	 * <p>
 	 * Returns the {@link List} of commands to redo in the order to be redone.
-	 * </p>
-	 * 
+	 *
 	 * @return a {@link List} of {@link ChangeMark}.
 	 */
 	protected List<ChangeMark> getChangesToRedo() {

@@ -19,13 +19,10 @@ import org.eclipse.emf.ecore.ETypeParameter;
 
 
 /**
- * <p>
  * This generator writes into a {@link Writer} Java code for one Ecore
  * {@link EClass} as an interface for the tinymodel framework.
- * </p>
- * 
+ *
  * @author Jean-Charles Roger
- * 
  */
 public class JavaInterfaceGenerator {
 	/** Object that calls generator. */

@@ -6,16 +6,16 @@ package fr.minibilles.basics.generation.c;
 import java.io.InputStream;
 
 /**
- * <p>This interface proposes methods to handle C Content in event based
- * mode (as SAX does).</p>
- * <p>It's a first version, this API may change in the next version.</p>
+ * This interface proposes methods to handle C Content in event based
+ * mode (as SAX does).
+ * It's a first version, this API may change in the next version.
  * 
  * @author Jean-Charles Roger
  */
 public interface CContentHandler {
 
 	/** 
-	 * <p>Creates and opens a directory. The files are created in the directory
+	 * Creates and opens a directory. The files are created in the directory
 	 * (until the next {@link #beginDirectory(String)} or 
 	 * {@link #endDirectory(String)}).
 	 * @param name directory name, must be a valid directory name.
@@ -23,20 +23,20 @@ public interface CContentHandler {
 	void beginDirectory(String name);
 	
 	/**
-	 * <p>Ends directory.</p>
+	 * Ends directory.
 	 * @param name directory name, must be a valid directory name.
 	 */
 	void endDirectory(String name);
 
 	/** 
-	 * <p>Starts a textual file. If file name ends with '.c' or '.h' (case 
-	 * ignored) it will considered as a C file.</p>
+	 * Starts a textual file. If file name ends with '.c' or '.h' (case
+	 * ignored) it will considered as a C file.
 	 * @param name file name, must be a valid file name.
 	 */
 	void beginFile(String name);
 	
 	/**
-	 * <p>Ends a textual file.</p>
+	 * Ends a textual file.
 	 * @param name file name, must be a valid file name.
 	 */
 	void endFile(String name);
@@ -49,7 +49,7 @@ public interface CContentHandler {
 	void code(String code);
 	
 	/**
-	 * <p>Appends a comment.</p>
+	 * Appends a comment.
 	 * @param flags comment flag, must be one of {@link C#SINGLE_LINE} or
 	 * 	{@link C#MULTI_LINE}
 	 * @param level tabulation level.
@@ -58,7 +58,7 @@ public interface CContentHandler {
 	void comment(int flags, int level, String comment);
 	
 	/**
-	 * <p>Adds a file in current location with given content.</p>
+	 * Adds a file in current location with given content.
 	 * 
 	 * @param stream used as content
 	 * @param filename name of created file

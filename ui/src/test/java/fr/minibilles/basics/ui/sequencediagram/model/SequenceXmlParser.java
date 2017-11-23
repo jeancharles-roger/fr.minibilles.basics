@@ -121,7 +121,7 @@ public class SequenceXmlParser extends DefaultHandler implements ContentHandler 
 		return sequence;
 	}
 	
-	/** Parses a stream as a XML described sequence and returns it. </p> */
+	/** Parses a stream as a XML described sequence and returns it. */
 	public static Sequence parseSequence(InputStream stream) throws SAXException, IOException {
 		final XMLReader reader = XMLReaderFactory.createXMLReader();
 		final SequenceXmlParser handler = new SequenceXmlParser();
@@ -131,12 +131,12 @@ public class SequenceXmlParser extends DefaultHandler implements ContentHandler 
 		
 	}
 	
-	/** Parses a file as a XML described sequence and returns it. </p> */
+	/** Parses a file as a XML described sequence and returns it. */
 	public static Sequence parseSequence(File file) throws SAXException, IOException {
 		return parseSequence(new FileInputStream(file));
 	}
 	
-	/** Parses a file as a XML described sequence and returns it. </p> */
+	/** Parses a file as a XML described sequence and returns it. */
 	public static Sequence parseSequence(String filename) throws SAXException, IOException {
 		return parseSequence(new File(filename));
 	}

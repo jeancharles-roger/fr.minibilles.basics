@@ -4,10 +4,8 @@
 package fr.minibilles.basics.error;
 
 /**
- * <p>
  * Handles errors for models actions.
- * </p>
- * 
+ *
  * @author Jean-Charles Roger
  * 
  */
@@ -17,10 +15,8 @@ public interface ErrorHandler {
 	public void handleError(Diagnostic diagnostic);
 
 	/**
-	 * <p>
 	 * This {@link ErrorHandler} prints errors and warning to console and
 	 * throws a {@link RuntimeException} for ERROR and FATAL_ERROR.
-	 * </p>
 	 */
 	public static final ErrorHandler simple = new ErrorHandler() {
 		public void handleError(int type, String message) {

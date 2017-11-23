@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * <p> A {@link CompoundValidator} allows to agreate several {@link Validator} on same type</p>
+ *  A {@link CompoundValidator} allows to agreate several {@link Validator} on same type
  * @author Jean-Charles Roger
  *
  */

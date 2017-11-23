@@ -42,8 +42,8 @@ import org.eclipse.swt.widgets.Text;
  * It's able to handle:
  * <ul>
  * <li>header banner with image and diagnostic informations,</li>
- * <li>hints,</li>
- * 
+ * <li>hints, ...</li>
+ * </ul>
  * @author Jean-Charles Roger
  *
  */

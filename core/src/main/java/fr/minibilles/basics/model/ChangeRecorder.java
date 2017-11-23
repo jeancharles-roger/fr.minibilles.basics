@@ -2,9 +2,7 @@ package fr.minibilles.basics.model;
 
 
 /**
- * <p>
  * Interface for all change recorders.
- * </p>
  *
  * @author Jean-Charles Roger.
  *
@@ -12,9 +10,7 @@ package fr.minibilles.basics.model;
 public interface ChangeRecorder extends ChangeHandler {
 
 	/**
-	 * <p>
 	 * This change handler records nothing.
-	 * </p>
 	 */
 	public static final ChangeRecorder Stub  = new ChangeRecorder() {
 
@@ -44,9 +40,8 @@ public interface ChangeRecorder extends ChangeHandler {
 	};
 	
 	/**
-	 * <p>
 	 * Records the change of an attribute.
-	 * </p>
+	 *
 	 * @param receiver object that contains the attribute.
 	 * @param attributeName the attribute name.
 	 * @param oldValue the old attribute's value.
@@ -54,9 +49,8 @@ public interface ChangeRecorder extends ChangeHandler {
 	public void recordChangeAttribute(ModelObject receiver, String attributeName, Object oldValue);
 	
 	/**
-	 * <p>
 	 * Records the change of an attribute.
-	 * </p>
+	 *
 	 * @param receiver object that contains the attribute.
 	 * @param attributeName the attribute name.
 	 * @param index the index of the object that has been added.
@@ -64,9 +58,8 @@ public interface ChangeRecorder extends ChangeHandler {
 	public void recordAddObject(ModelObject receiver, String attributeName, int index);
 	
 	/**
-	 * <p>
 	 * Records the change of an attribute.
-	 * </p>
+	 *
 	 * @param receiver object that contains the attribute.
 	 * @param attributeName the attribute name.
 	 * @param index the index where the object has removed
@@ -75,9 +68,8 @@ public interface ChangeRecorder extends ChangeHandler {
 	public void recordRemoveObject(ModelObject receiver, String attributeName, int index, Object removedObject);
 	
 	/**
-	 * <p>
 	 * Records the change of an attribute.
-	 * </p>
+	 *
 	 * @param receiver object that contains the attribute.
 	 * @param attributeName the attribute name.
 	 * @param index the object index of the object that has been added or put.
@@ -86,9 +78,8 @@ public interface ChangeRecorder extends ChangeHandler {
 	public void recordPutObject(ModelObject receiver, String attributeName, Object index, Object oldValue);
 
 	/**
-	 * <p>
 	 * Records the change of an attribute.
-	 * </p>
+	 *
 	 * @param receiver object that contains the attribute.
 	 * @param attributeName the attribute name.
 	 * @param index the object index of the object that has been removed.

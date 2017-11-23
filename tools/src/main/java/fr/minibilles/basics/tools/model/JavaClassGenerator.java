@@ -25,18 +25,14 @@ import org.eclipse.emf.ecore.ETypeParameter;
 
 
 /**
- * <p>
  * This generator writes into a {@link Writer} Java code for one Ecore
  * {@link EClass} for the tinymodel framework.
- * </p>
  * <p>
  * If a the source {@link EClass} contains multi inheritance, the result of the
  * generation won't be correct.
- * </p>
  * <p>
  * TODO: generic type parameter for attributes.
- * </p>
- * 
+ *
  * @author Jean-Charles Roger
  * 
  */

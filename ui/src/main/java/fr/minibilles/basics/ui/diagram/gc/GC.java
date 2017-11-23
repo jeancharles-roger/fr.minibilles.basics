@@ -99,14 +99,13 @@ public interface GC {
 	 * Angles are interpreted such that 0 degrees is at the 3 o'clock
 	 * position. A positive value indicates a counter-clockwise rotation
 	 * while a negative value indicates a clockwise rotation.
-	 * </p><p>
+	 * <p>
 	 * The center of the arc is the center of the rectangle whose origin 
 	 * is (<code>x</code>, <code>y</code>) and whose size is specified by the 
 	 * <code>width</code> and <code>height</code> arguments. 
-	 * </p><p>
+	 * <p>
 	 * The resulting arc covers an area <code>width + 1</code> pixels wide
 	 * by <code>height + 1</code> pixels tall.
-	 * </p>
 	 *
 	 * @param x the x coordinate of the upper-left corner of the arc to be drawn
 	 * @param y the y coordinate of the upper-left corner of the arc to be drawn
@@ -149,16 +148,12 @@ public interface GC {
 	 * @param x the x coordinate of where to draw
 	 * @param y the y coordinate of where to draw
 	 *
-	 * @exception IllegalArgumentException <ul>
-	 *    <li>ERROR_NULL_ARGUMENT - if the image is null</li>
-	 *    <li>ERROR_INVALID_ARGUMENT - if the image has been disposed</li>
-	 *    <li>ERROR_INVALID_ARGUMENT - if the given coordinates are outside the bounds of the image</li>
-	 * @exception SWTException <ul>
-	 *    <li>ERROR_GRAPHIC_DISPOSED - if the receiver has been disposed</li>
-	 * </ul>
-	 * @exception SWTError <ul>
-	 *    <li>ERROR_NO_HANDLES - if no handles are available to perform the operation</li>
-	 * </ul>
+	 * @exception IllegalArgumentException:
+	 *    - ERROR_NULL_ARGUMENT - if the image is null
+	 *    - ERROR_INVALID_ARGUMENT - if the image has been disposed
+	 *    - ERROR_INVALID_ARGUMENT - if the given coordinates are outside the bounds of the image
+	 * @exception SWTException: ERROR_GRAPHIC_DISPOSED - if the receiver has been disposed
+	 * @exception SWTError: ERROR_NO_HANDLES - if no handles are available to perform the operation
 	 */
 	void drawImage(Image image, int x, int y);
 
@@ -219,10 +214,9 @@ public interface GC {
 	 * The result is a circle or ellipse that fits within the 
 	 * rectangle specified by the <code>x</code>, <code>y</code>, 
 	 * <code>width</code>, and <code>height</code> arguments. 
-	 * </p><p> 
+	 * <p>
 	 * The oval covers an area that is <code>width + 1</code> 
 	 * pixels wide and <code>height + 1</code> pixels tall.
-	 * </p>
 	 *
 	 * @param x the x coordinate of the upper left corner of the oval to be drawn
 	 * @param y the y coordinate of the upper left corner of the oval to be drawn
@@ -241,8 +235,7 @@ public interface GC {
 	 * This operation requires the operating system's advanced
 	 * graphics subsystem which may not be available on some
 	 * platforms.
-	 * </p>
-	 * 
+	 *
 	 * @param path the path to draw
 	 *
 	 * @exception IllegalArgumentException <ul>
@@ -266,7 +259,6 @@ public interface GC {
 	 * <p>
 	 * Note that the receiver's line attributes do not affect this
 	 * operation.
-	 * </p>
 	 *
 	 * @param x the point's x coordinate
 	 * @param y the point's y coordinate
@@ -480,7 +472,6 @@ public interface GC {
 	 * <dt><b>DRAW_TRANSPARENT</b></dt>
 	 * <dd>transparent background</dd>
 	 * </dl>
-	 * </p>
 	 *
 	 * @param string the string to be drawn
 	 * @param x the x coordinate of the top left corner of the rectangular area where the text is to be drawn
@@ -518,14 +509,13 @@ public interface GC {
 	 * Angles are interpreted such that 0 degrees is at the 3 o'clock
 	 * position. A positive value indicates a counter-clockwise rotation
 	 * while a negative value indicates a clockwise rotation.
-	 * </p><p>
+	 * <p>
 	 * The center of the arc is the center of the rectangle whose origin 
 	 * is (<code>x</code>, <code>y</code>) and whose size is specified by the 
 	 * <code>width</code> and <code>height</code> arguments. 
-	 * </p><p>
+	 * <p>
 	 * The resulting arc covers an area <code>width + 1</code> pixels wide
 	 * by <code>height + 1</code> pixels tall.
-	 * </p>
 	 *
 	 * @param x the x coordinate of the upper-left corner of the arc to be filled
 	 * @param y the y coordinate of the upper-left corner of the arc to be filled
@@ -590,7 +580,6 @@ public interface GC {
 	 * This operation requires the operating system's advanced
 	 * graphics subsystem which may not be available on some
 	 * platforms.
-	 * </p>
 	 *
 	 * @param path the path to fill
 	 *
@@ -690,7 +679,6 @@ public interface GC {
 	 * <p>
 	 * The advance width is defined as the horizontal distance the cursor
 	 * should move after printing the character in the selected font.
-	 * </p>
 	 *
 	 * @param ch the character to measure
 	 * @return the distance in the x direction to move past the character before painting the next
@@ -714,7 +702,6 @@ public interface GC {
 	 * has caused the receiver to switch from regular to advanced graphics mode,
 	 * <code>true</code> is returned.  If the receiver has been explicitly switched
 	 * to advanced mode and this mode is supported, <code>true</code> is returned.
-	 * </p>
 	 *
 	 * @return the advanced value
 	 *
@@ -793,7 +780,6 @@ public interface GC {
 	 * The width is defined as the space taken up by the actual
 	 * character, not including the leading and tailing whitespace
 	 * or overhang.
-	 * </p>
 	 *
 	 * @param ch the character to measure
 	 * @return the width of the character
@@ -918,7 +904,6 @@ public interface GC {
 	 * can be shared within the packages provided by SWT. It is not
 	 * available on all platforms, and should never be called from
 	 * application code.
-	 * </p>
 	 *
 	 * @return the receiver's GCData
 	 *
@@ -1040,7 +1025,6 @@ public interface GC {
 	 * when the receiver was created. This can occur when the underlying
 	 * operating system does not support a particular combination of
 	 * requested styles. 
-	 * </p>
 	 *
 	 * @return the style bits
 	 *  
@@ -1164,14 +1148,13 @@ public interface GC {
 	 * advanced and normal graphics operations.  Because the two subsystems are
 	 * different, their output may differ.  Switching to advanced graphics before
 	 * any graphics operations are performed ensures that the output is consistent.
-	 * </p><p>
+	 * <p>
 	 * Advanced graphics may not be installed for the operating system.  In this
 	 * case, this operation does nothing.  Some operating system have only one
 	 * graphics subsystem, so switching from normal to advanced graphics does
 	 * nothing.  However, switching from advanced to normal graphics will always
 	 * clear the advanced graphics state, even for operating systems that have
 	 * only one graphics subsystem.
-	 * </p>
 	 *
 	 * @param advanced the new advanced graphics state
 	 *
@@ -1203,7 +1186,6 @@ public interface GC {
 	 * This operation requires the operating system's advanced
 	 * graphics subsystem which may not be available on some
 	 * platforms.
-	 * </p>
 	 *
 	 * @param antialias the anti-aliasing setting
 	 *
@@ -1230,7 +1212,7 @@ public interface GC {
 	 * This operation requires the operating system's advanced
 	 * graphics subsystem which may not be available on some
 	 * platforms.
-	 * </p>
+	 *
 	 * @param alpha the alpha value
 	 *
 	 * @exception SWTException <ul>
@@ -1268,8 +1250,7 @@ public interface GC {
 	 * This operation requires the operating system's advanced
 	 * graphics subsystem which may not be available on some
 	 * platforms.
-	 * </p>
-	 * 
+	 *
 	 * @param pattern the new background pattern
 	 *
 	 * @exception IllegalArgumentException <ul>
@@ -1312,8 +1293,7 @@ public interface GC {
 	 * This operation requires the operating system's advanced
 	 * graphics subsystem which may not be available on some
 	 * platforms.
-	 * </p>
-	 * 
+	 *
 	 * @param path the clipping path.
 	 * 
 	 * @exception IllegalArgumentException <ul>
@@ -1422,7 +1402,7 @@ public interface GC {
 	 * This operation requires the operating system's advanced
 	 * graphics subsystem which may not be available on some
 	 * platforms.
-	 * </p>
+	 *
 	 * @param pattern the new foreground pattern
 	 *
 	 * @exception IllegalArgumentException <ul>
@@ -1449,8 +1429,7 @@ public interface GC {
 	 * This operation requires the operating system's advanced
 	 * graphics subsystem which may not be available on some
 	 * platforms.
-	 * </p>
-	 * 
+	 *
 	 * @param interpolation the new interpolation setting
 	 *
 	 * @exception IllegalArgumentException <ul>
@@ -1475,7 +1454,7 @@ public interface GC {
 	 * This operation requires the operating system's advanced
 	 * graphics subsystem which may not be available on some
 	 * platforms.
-	 * </p>
+	 *
 	 * @param attributes the line attributes
 	 *
 	 * @exception IllegalArgumentException <ul>
@@ -1577,7 +1556,6 @@ public interface GC {
 	 * indicate that the fastest possible line drawing
 	 * algorithms should be used. This means that the
 	 * output may be different from line width one.
-	 * </p>
 	 *
 	 * @param lineWidth the width of a line
 	 *
@@ -1598,7 +1576,6 @@ public interface GC {
 	 * Note that this mode in fundamentally unsupportable on certain
 	 * platforms, notably Carbon (Mac OS X). Clients that want their
 	 * code to run on all platforms need to avoid this method.
-	 * </p>
 	 *
 	 * @param xor if <code>true</code>, then <em>xor</em> mode is used, otherwise <em>source copy</em> mode is used
 	 *
@@ -1619,8 +1596,7 @@ public interface GC {
 	 * This operation requires the operating system's advanced
 	 * graphics subsystem which may not be available on some
 	 * platforms.
-	 * </p>
-	 * 
+	 *
 	 * @param antialias the anti-aliasing setting
 	 *
 	 * @exception IllegalArgumentException <ul>
@@ -1648,8 +1624,7 @@ public interface GC {
 	 * This operation requires the operating system's advanced
 	 * graphics subsystem which may not be available on some
 	 * platforms.
-	 * </p>
-	 * 
+	 *
 	 * @param transform the transform to set
 	 * 
 	 * @exception IllegalArgumentException <ul>
@@ -1675,7 +1650,6 @@ public interface GC {
 	 * The <em>extent</em> of a string is the width and height of
 	 * the rectangular area it would cover if drawn in a particular
 	 * font (in this case, the current font in the receiver).
-	 * </p>
 	 *
 	 * @param string the string to measure
 	 * @return a point containing the extent of the string
@@ -1696,7 +1670,6 @@ public interface GC {
 	 * The <em>extent</em> of a string is the width and height of
 	 * the rectangular area it would cover if drawn in a particular
 	 * font (in this case, the current font in the receiver).
-	 * </p>
 	 *
 	 * @param string the string to measure
 	 * @return a point containing the extent of the string
@@ -1728,7 +1701,6 @@ public interface GC {
 	 * The <em>extent</em> of a string is the width and height of
 	 * the rectangular area it would cover if drawn in a particular
 	 * font (in this case, the current font in the receiver).
-	 * </p>
 	 *
 	 * @param string the string to measure
 	 * @param flags the flags specifying how to process the text

@@ -21,7 +21,7 @@ public class MergerUtil {
 	}
 
 	/**
-	 * <p>Loads a file contents as a String using platform encoding.</p>
+	 * Loads a file contents as a String using platform encoding.
 	 * @param file file to load.
 	 * @return the file contents as a {@link String}.
 	 * @throws Exception 

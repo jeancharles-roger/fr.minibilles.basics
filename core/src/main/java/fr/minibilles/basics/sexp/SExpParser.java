@@ -79,12 +79,10 @@ public class SExpParser {
 	}
 
 	/**
-	 * <p>
 	 * Reads the next token from stream. It considers the tokens separated by
 	 * '(', ')', ' ', tab, new line and '''. One separator is one token, nothing is lost,
 	 * everything in the buffer will appear as tokens.
-	 * </p>
-	 * 
+	 *
 	 * @return the next token in the stream, null if eof is reached
 	 * @throws IOException 
 	 */

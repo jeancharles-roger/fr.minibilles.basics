@@ -14,13 +14,10 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 
 /**
- * <p>
- * This generator writes into a {@link Writer} Java code for one Ecore 
+ * This generator writes into a {@link Writer} Java code for one Ecore
  * {@link EPackage} and sub packages cloner.
- * </p>
- * 
+ *
  * @author Jean-Charles Roger
- * 
  */
 public class ClonerClassGenerator {
 
@@ -46,14 +43,13 @@ public class ClonerClassGenerator {
 		content.markImports();
 
 		StringBuilder comment = new StringBuilder();
-		comment.append("<p>Cloner for objects in packages '");
+		comment.append("Cloner for objects in packages '");
 		comment.append(source.getName()); 
 		comment.append("'");
 		if ( recursive ) {
 			comment.append(" and children");
 		}
 		comment.append("."); 
-		comment.append("</p>"); 
 		content.comment(Java.JAVA_DOC, 0, comment.toString());
 		
 		content.beginClass(Java.PUBLIC, className, abstractCloner, visitorName);
@@ -76,7 +72,7 @@ public class ClonerClassGenerator {
 	}
 
 	private void generateStaticMethod(EClass inherintanceRootClass, String clonerName, JavaContentHandler content) {
-		String comment = "<p>Clones given object. Only object and children (by containment) are cloned. Referenced objects which are not contained aren't cloned.</p>";
+		String comment = "Clones given object. Only object and children (by containment) are cloned. Referenced objects which are not contained aren't cloned.";
 		
 		String rootShortName = caller.getDependencyManager().getShortName(caller.getTypeName(inherintanceRootClass));
 		

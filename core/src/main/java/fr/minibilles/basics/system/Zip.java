@@ -14,16 +14,16 @@ import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
 
 /**
- * <p>Zip contains a set of methods to compress and uncompress zip files. All
- * methods uses a {@link BasicShell} for error handling and logging.</p>
+ * Zip contains a set of methods to compress and uncompress zip files. All
+ * methods uses a {@link BasicShell} for error handling and logging.
  * 
  * @author Jean-Charles Roger
  */
 public class Zip {
 
 	/**
-	 * <p>Zips listed files to given archive file. It creates a new archive. 
-	 * If an archive was already present, it's erased.</p>
+	 * Zips listed files to given archive file. It creates a new archive.
+	 * If an archive was already present, it's erased.
 	 * @param shell used shell for zip.
 	 * @param archive target archive.
 	 * @param filesToZip list of files to zip.
@@ -64,9 +64,9 @@ public class Zip {
 	}
 	
 	/**
-	 * <p>This methods zips to the archive file the result of 
+	 * This methods zips to the archive file the result of
 	 * {@link BasicShell#ls(String, int)} performed on given shell with given 
-	 * parameters.</p>
+	 * parameters.
 	 * @param shell used shell for zip.
 	 * @param archive target archive.
 	 * @param filter ls parameter.
@@ -78,9 +78,9 @@ public class Zip {
 	}
 	
 	/**
-	 * <p>This methods zips to the archive file the result of 
+	 * This methods zips to the archive file the result of
 	 * {@link BasicShell#ls(File, String, int)} performed on given shell with 
-	 * given parameters.</p>
+	 * given parameters.
 	 * @param shell used shell for zip.
 	 * @param archive target archive.
 	 * @param rootFile ls parameter
@@ -93,7 +93,7 @@ public class Zip {
 	}
 	
 	/**
-	 * <p>Unzip given archives file to given destination.</p>
+	 * Unzip given archives file to given destination.
 	 * @param shell used shell for unzip.
 	 * @param archive archive file.
 	 * @param destination destination directory.

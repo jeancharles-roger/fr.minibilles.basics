@@ -116,15 +116,14 @@ public class XmlToModelClassGenerator {
 		content.markImports();
 		
 		StringBuilder comment = new StringBuilder();
-		comment.append("<p>XML reader for model '");
+		comment.append("XML reader for model '");
 		comment.append(source.getName()); 
 		comment.append("'");
 		if ( recursive ) {
 			comment.append(" and children");
 		}
 		comment.append("."); 
-		comment.append("</p>"); 
-		
+
 		content.comment(Java.JAVA_DOC, 0, comment.toString());
 
 		content.beginClass(Java.PUBLIC, className, null, null);
@@ -203,7 +202,7 @@ public class XmlToModelClassGenerator {
 	
 	
 	private void generateXsiNameInitMethods(List<EClass> concreteClassList, JavaContentHandler content) {
-		content.comment(Java.JAVA_DOC, 0, "<p>Initializes class to xsi name map for automatic resolution</p>.");
+		content.comment(Java.JAVA_DOC, 0, "Initializes class to xsi name map for automatic resolution.");
 		content.beginMethod(Java.PRIVATE, "void", "initXsiNameMap", null);
 		for ( EClass concreteClass : concreteClassList ) {
 			String eclassShortName = caller.getDependencyManager().getShortName(caller.getClassQualifiedName(concreteClass));
@@ -218,9 +217,9 @@ public class XmlToModelClassGenerator {
 		final String elementShortName = caller.getDependencyManager().getShortName("org.w3c.dom.Element");
 		
 		content.comment(Java.JAVA_DOC, 0, 
-				"<p>Creates an instance of T from given Element. It create an instance.\n" +
+				"Creates an instance of T from given Element. It create an instance.\n" +
 						"and tries to resolve references. If a reference isn't resolved, it\n" +
-						"throws an IOException.</p>\n"
+						"throws an IOException.\n"
 				);
 		content.beginMethod(Java.PUBLIC, "<T> T", "to", "IOException",
 				new Java.Parameter(Java.NONE, "Class<T>", "klass"),
@@ -262,9 +261,9 @@ public class XmlToModelClassGenerator {
 		final String elementShortName = caller.getDependencyManager().getShortName("org.w3c.dom.Element");
 		
 		content.comment(Java.JAVA_DOC, 0, 
-		  "<p>Creates an instance of T from given Element. It create an instance.\n" +
+		  "Creates an instance of T from given Element. It create an instance.\n" +
 		  "and tries to resolve references. If a reference isn't resolved, it\n" +
-	      "keeps them stored for later calls to create.</p>\n"
+	      "keeps them stored for later calls to create.\n"
 		);
 		content.beginMethod(Java.PUBLIC, "<T> T", "create", "IOException",
 				new Java.Parameter(Java.NONE, "Class<T>", "klass"),

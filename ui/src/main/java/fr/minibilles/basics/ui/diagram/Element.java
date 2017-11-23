@@ -7,7 +7,7 @@ import java.util.List;
 import org.eclipse.swt.graphics.Image;
 
 /**
- * <p>An element is a {@link Displayable} representation of a model's element</p>
+ * An element is a {@link Displayable} representation of a model's element
  * 
  * @author Jean-Charles Roger (original from Didier Simoneau).
  */
@@ -71,7 +71,6 @@ public interface Element extends Displayable {
 	/**
 	 * Returns the list of actions to be presented when this element is selected.
 	 * @param context the current editing context
-	 * @return the action list
 	 */
 	public void computeActions(List<Action> result, DiagramContext context);
 

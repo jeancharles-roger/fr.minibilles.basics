@@ -16,14 +16,14 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 /**
- * <p>A Basics shell allows to execute system commands as shell would do it.
- * It only provides simple commands written in Java (system independent).</p>
+ * A Basics shell allows to execute system commands as shell would do it.
+ * It only provides simple commands written in Java (system independent).
  * <p>
  * It supports:
  * <ul>
  * <li>Execution commands:
  * <ul><li>exec on commands</li></ul>
- *</li>
+ * </li>
  * <li>File and directory commands:
  * <ul>
  * <li>cd (use of a working directory).</li>
@@ -32,10 +32,8 @@ import java.util.regex.Pattern;
  * </ul>
  * </li>
  * </ul>
- * </p>
  * <p>
  * A <code>mv</code> command won't be implemented, the {@link File#renameTo(File)} works just fine.
- * </p> 
  * @author Jean-Charles Roger
  */
 public class BasicShell {
@@ -96,7 +94,7 @@ public class BasicShell {
 	}
 	
 	/**
-	 * <p>Lists the files in current directory that matches the filter.</p>
+	 * Lists the files in current directory that matches the filter.
 	 * @param filter RegEx to filter the result, if null there is no filtering. 
 	 * 		  It doesn't affect the directories.
 	 * @param flags 
@@ -111,7 +109,7 @@ public class BasicShell {
 	
 	
 	/**
-	 * <p>Lists the files using the given file as starting point that matches the filter.</p>
+	 * Lists the files using the given file as starting point that matches the filter.
 	 * <p><b>Examples:</b>
 	 * <ul>
 	 * <li>
@@ -184,24 +182,28 @@ public class BasicShell {
 	}
 
 	/** 
-	 * Copies source file to destination file. 
+	 * Copies source file to destination file.
+	 * <p>
+	 * {@link #ls(String, String, int)} for file selection for copy.
+	 *
 	 * @param source source file name to copy. If it's a directory it copies it's members.
 	 * @param destination destination file name.
 	 * @param filter RegEx to filter the files to remove. If null all file will be removed.
 	 * @param flags flags for copy {@link Basics#RECURSIVE}, {@link Basics#OVERWRITE}.
-	 * @see {@link #ls(String, String, int)} for file selection for copy. 
 	 */
 	public void cp(String source, String destination, String filter, int flags) {
 		cp(new File(source), new File(destination), filter, flags);
 	}
 	
 	/** 
-	 * Copies source file to destination file. 
+	 * Copies source file to destination file.
+	 * <p>
+	 * See {@link #ls(String, String, int)} for file selection for copy.
+	 *
 	 * @param source source file to copy. If it's a directory it copies it's members.
 	 * @param destination destination file.
 	 * @param filter RegEx to filter the files to remove. If null all file will be removed.
 	 * @param flags flags for copy {@link Basics#RECURSIVE}, {@link Basics#HIDDEN}, {@link Basics#OVERWRITE}.
-	 * @see {@link #ls(String, String, int)} for file selection for copy. 
 	 */
 	public void cp(File source, File destination, String filter, int flags) {
 		if ( !source.isAbsolute() ) source = new File(pwd(), source.getPath());
@@ -253,10 +255,12 @@ public class BasicShell {
 	
 	/**
 	 * Removes given filename.
+	 * <p>
+	 * See {@link #ls(String, String, int)} for file selection for remove.
+	 *
 	 * @param file file to remove
 	 * @param filter filter to apply to the files
 	 * @param flags flags for rm {@link Basics#RECURSIVE}, {@link Basics#HIDDEN}.
-	 * @see {@link #ls(String, String, int)} for file selection for remove. 
 	 */
 	public void rm(String file, String filter, int flags) {
 		rm(new File(file), filter, flags);
@@ -264,15 +268,19 @@ public class BasicShell {
 	
 	
 	/**
-	 * <p>Removes given file.</p> 
-	 * <p>A directory which isn't empty won't be removed. Rm uses 
-	 * {@link #ls(File, String, int)}  to select files to remove.</p>
-	 * <p>To be certain that a directory will be entirely removed use the flags 
-	 * {@link Basics#RECURSIVE} and {@link Basics#HIDDEN} (but with care :) ).</p>
+	 * Removes given file.
+	 * <p>
+	 *  A directory which isn't empty won't be removed. Rm uses
+	 * {@link #ls(File, String, int)}  to select files to remove.
+	 * <p>
+	 * To be certain that a directory will be entirely removed use the flags
+	 * {@link Basics#RECURSIVE} and {@link Basics#HIDDEN} (but with care :) ).
+	 * <p>
+	 * See {@link #ls(String, String, int)} for file selection for remove.
+	 *
 	 * @param file file to remove
 	 * @param filter filter to apply to the files
 	 * @param flags flags for rm {@link Basics#RECURSIVE}, {@link Basics#HIDDEN}.
-	 * @see {@link #ls(String, String, int)} for file selection for remove. 
 	 */
 	public void rm(File file, String filter, int flags) {
 		if ( !file.isAbsolute() ) file = new File(pwd(), file.getPath());

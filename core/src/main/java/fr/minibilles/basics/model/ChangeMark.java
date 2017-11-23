@@ -33,9 +33,7 @@ public abstract class ChangeMark {
 	}
 	
 	/**
-	 * <p>
 	 * Undo change mark.
-	 * </p>
 	 */
 	public abstract void undo();
 		

@@ -11,8 +11,8 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * <p>A {@link ModelToSExp} instance store information for model references.
- * It helps to create a {@link SExp} representation from a model.</p>
+ * A {@link ModelToSExp} instance store information for model references.
+ * It helps to create a {@link SExp} representation from a model.
  * 
  * @author Jean-Charles Roger (jean-charles.roger@gmail.com)
  *

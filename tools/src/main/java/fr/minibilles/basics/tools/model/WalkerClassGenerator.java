@@ -12,14 +12,11 @@ import org.eclipse.emf.ecore.EReference;
 
 
 /**
- * <p>
- * This generator writes into a {@link Writer} Java code for one Ecore 
+ * This generator writes into a {@link Writer} Java code for one Ecore
  * {@link EPackage} and sub packages as a walker methods for the basic 
  * framework.
- * </p>
- * 
+ *
  * @author Jean-Charles Roger
- * 
  */
 public class WalkerClassGenerator {
 
@@ -44,7 +41,7 @@ public class WalkerClassGenerator {
 		
 		
 		StringBuilder comment = new StringBuilder();
-		comment.append("<p>Walker for package '");
+		comment.append("Walker for package '");
 		comment.append(source.getName()); 
 		comment.append("'");
 		if ( recursive ) {
@@ -52,8 +49,7 @@ public class WalkerClassGenerator {
 		}
 		comment.append("."); 
 		comment.append(" A walker navigates throught objects using the containment tree and visit each node with the given visitor."); 
-		comment.append("</p>"); 
-		
+
 		content.comment(Java.JAVA_DOC, 0, comment.toString());
 		content.beginClass(Java.PUBLIC, className, null, visitorName);
 

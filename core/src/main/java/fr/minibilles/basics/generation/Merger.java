@@ -16,10 +16,8 @@ import java.util.List;
 public interface Merger {
 
 	/**
-	 * <p>
 	 * Merge a file with the new contents for this file.
-	 * </p>
-	 * 
+	 *
 	 * @param destinationFile
 	 *            destination file for new contents.
 	 * @param contents

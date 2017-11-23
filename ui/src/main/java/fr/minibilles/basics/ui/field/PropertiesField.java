@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <p>
  * A {@link PropertiesField} is a special {@link VirtualMultiPageField} which presents
  * a page for each type of subject. The presented page is a {@link CompositeField}
  * provided by a {@link Controller}. The {@link Controller} is found using reflection.
@@ -14,8 +13,8 @@ import java.util.List;
  * package given within the constructor. The controller's name is created using
  * the subject's class name. For instance, for {@link String} subject, the controller
  * name will be <code>StringController</code>
- * </p>
- * <p>It handles the whole {@link Controller} life cycle.</p>
+ * <p>
+ * It handles the whole {@link Controller} life cycle.
  * 
  * @author Jean-Charles Roger
  */

@@ -372,7 +372,7 @@ public abstract class TreeField<T> extends AbstractField {
 	}
 	
 	/**
-	 * <p>Used when field is {@link BasicsUI#ITEM_EDITABLE} to convert a text to T.</p>
+	 * Used when field is {@link BasicsUI#ITEM_EDITABLE} to convert a text to T.
 	 * @param text to convert.
 	 * @return the converted text or null if it can't be converted.
 	 */

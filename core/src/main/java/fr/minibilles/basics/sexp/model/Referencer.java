@@ -6,7 +6,6 @@ import java.util.Map;
 import java.util.Stack;
 
 /**
- * <p> 
  * A {@link Referencer} creates {@link String} references for objects to 
  * serialize. References are contextual, each time a call to 
  * {@link #pushContext(Object)} returns true it creates a new context where 
@@ -20,31 +19,29 @@ import java.util.Stack;
  * If the reference object is not serialized, an unresolved reference exception
  * is thrown.</li>
  * </ul>
- * </p>
- * 
+ *
  * <p>
  * The object structure (containment tree) is reproduced using 
  * {@link #pushContext(Object)} and {@link #popContext(Object)} methods allowing
  * to construct reference depending on their parents. It's also the way to
  * tell whenever an object creates a new referencing context (by returning true
  * to those methods).
- * </p>
- * 
+ *
  * <p>
  * References for one context should be unique, but there is a fail safe 
  * mechanism (adds '_' at the end of duplicated references) that allows to 
  * serialize the model with out errors. When it happens, the resulting text
  * file will be much more fragile to hand edition that it normally is.
- * </p>
+ *
  * @author Jean-Charles Roger (jean-charles.roger@gmail.com)
  *
  */
 public interface Referencer {
 
 	/**
-	 * <p>An object is given for context. It's used for reference construction.
+	 * An object is given for context. It's used for reference construction.
 	 * It allows to construct qualified name with objects that contains the 
-	 * referenced one.</p>
+	 * referenced one.
 	 * 
 	 * @param object to push in context
 	 * @return true if a new reference to object context is to be created.
@@ -65,16 +62,16 @@ public interface Referencer {
 	boolean popContext(Object object);
 	
 	/**
-	 * <p>Forces an adhock reference for an object. It must be called before
-	 * {@link #referenceFor(Object)} to be valid.</p>
-	 * 
+	 * Forces an adhock reference for an object. It must be called before
+	 * {@link #referenceFor(Object)} to be valid.
+	 *
 	 * @param object referenced object
 	 * @param reference the adhock reference.
 	 */
 	void forceReference(Object object, String reference);
 	
 	/**
-	 * <p>Creates a reference for given object.</p>
+	 * Creates a reference for given object.
 	 * 
 	 * @param object to create reference for.
 	 * @return a {@link String} reference, <b>can't be null</b>.
@@ -82,10 +79,10 @@ public interface Referencer {
 	String referenceFor(Object object);
 	
 	/**
-	 * <p>Models to serialize often haven standard object that can be 
+	 * Models to serialize often haven standard object that can be
 	 * referenced without been contained in the file. These objects are builtin
 	 * objects. This method can return builtin object that will be included in
-	 * the reference process.</p> 
+	 * the reference process.
 	 * @return a {@link Map} of builtin objects and their reference.
 	 */
 	Map<String, Object> builtins();

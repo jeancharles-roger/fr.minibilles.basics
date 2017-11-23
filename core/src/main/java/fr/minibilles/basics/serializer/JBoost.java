@@ -26,11 +26,9 @@ import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
 /**
- * <p>
  * A {@link JBoost} is able to serialize and de-serialize {@link BoostObject} to
  * text files in UTF-8 encoding.
- * </p>
- * 
+ * <p>
  * <b>Writing example</b>
  * 
  * <pre>
@@ -40,7 +38,8 @@ import java.util.zip.ZipOutputStream;
  * boost.writeObject(this);
  * boost.close();
  * </pre>
- * 
+ *
+ * <p>
  * <b>Reading example</b>
  * 
  * <pre>
@@ -57,95 +56,72 @@ import java.util.zip.ZipOutputStream;
 public class JBoost implements Boost {
 
 	/**
-	 * <p>
 	 * Token separators.
-	 * </p>
 	 */
 	protected static final String Separators = "[]{} :";
 
 	/**
-	 * <p>
 	 * Writing target.
-	 * </p>
 	 */
 	protected Writer writer;
 
 	/**
-	 * <p>
 	 * Reading source.
-	 * </p>
 	 */
 	protected Reader reader;
 
 	/**
-	 * <p>
 	 * This {@link ArrayList} stores the object indexes through file while
 	 * <b>reading</b>.
-	 * </p>
 	 */
 	protected final ArrayList<BoostObject> readObjetIndex = new ArrayList<BoostObject>();
 
 	/**
-	 * <p>
 	 * This {@link Map} store the object indexes through file while
 	 * <b>writing</b>.
-	 * </p>
 	 */
 	protected final LinkedHashMap<BoostObject, Integer> writeObjetIndex = new LinkedHashMap<BoostObject, Integer>();
 
 	/**
-	 * <p>
 	 * This {@link Map} store the class indexes through file.
-	 * </p>
 	 */
 	protected final HashMap<Class<? extends BoostObject>, Integer> classIndex = new HashMap<Class<? extends BoostObject>, Integer>();
 
 	/**
-	 * <p>
 	 * This {@link String} will be printed in the file header as serial Type.
-	 * </p>
 	 */
 	protected final String type;
 
 	/**
-	 * <p>
 	 * This integer will be printed in the file header as serial Version.
-	 * </p>
 	 */
 	protected final int version;
 
 	/**
-	 * <p>
 	 * Stores the version of file that is currently loading.
 	 */
 	protected int fileVersion;
 
 	/**
-	 * <p>
 	 * Handles errors.
-	 * </p>
 	 */
 	protected ErrorHandler errorHandler = ErrorHandler.simple;
 
 	/**
-	 * <p>
-	 * Stores names of classes that have changed. If {@link JBoost} reads 
+	 * Stores names of classes that have changed. If {@link JBoost} reads
 	 * a file with a reference to a class contained in this map it will create
 	 * a class the value of the entry.
-	 * </p>
 	 */
 	protected Map<String, String> boostNameToClassName = null;
 	
 	/**
-	 * <p> {@link Boost} class loader.</p>
+	 *  {@link Boost} class loader.
 	 */
 	private final ClassLoader classLoader;
 	
 	/**
-	 * <p>
 	 * Creates a {@link JBoost} instance for a special type and version.
-	 * </p>
-	 * 
+	 *
 	 * @param type
 	 *            type of file to read.
 	 * @param version
@@ -160,10 +136,8 @@ public class JBoost implements Boost {
 	}
 	
 	/**
-	 * <p>
 	 * Creates a {@link JBoost} instance for a special type and version.
-	 * </p>
-	 * 
+	 *
 	 * @param type
 	 *            type of file to read.
 	 * @param version
@@ -174,11 +148,9 @@ public class JBoost implements Boost {
 	}
 
 	/**
-	 * <p>
 	 * The current file version that is currently loading. Accessible only after
 	 * {@link #initializeReading(InputStream)}.
-	 * </p>
-	 * 
+	 *
 	 * @return the current file version.
 	 */
 	public int getFileVersion() {
@@ -638,9 +610,8 @@ public class JBoost implements Boost {
 	}
 
 	/**
-	 * <p>
 	 * Reads exactly the given number of characters.
-	 * </p>
+	 *
 	 * @param size number of character to read
 	 * @return the read {@link String}.
 	 */
@@ -697,7 +668,6 @@ public class JBoost implements Boost {
 	 * Reads the next token from stream. It considers the tokens separated by
 	 * {@value #Separators}. One separator is one token, nothing is lost,
 	 * everything in the buffer will appear as tokens.
-	 * </p>
 	 * <p>
 	 * For example, the stream <code>0.001 [1 AClass] s3:token</code>, will
 	 * gives the next tokens:

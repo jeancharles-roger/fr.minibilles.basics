@@ -1,9 +1,7 @@
 package fr.minibilles.basics.model;
 
 /**
- * <p>
  * All model object must implements this interface
- * </p>
  *
  * @author Jean-Charles Roger.
  *

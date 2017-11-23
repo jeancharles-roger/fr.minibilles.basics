@@ -13,10 +13,10 @@ import java.util.Stack;
 public abstract class AbstractCloner {
 
 	/**
-	 * <p>Private inner class that stores references for which the object isn't
+	 * Private inner class that stores references for which the object isn't
 	 * cloned yet. When a new object is cloned, all
 	 * {@link PendingReference} for new object reference stored in 
-	 * {@link SExpToModel#contextCurrent} are resolved.</p>
+	 * {@link SExpToModel#contextCurrent} are resolved.
 	 */
 	private class PendingReference {
 		final private Object receiver;
@@ -29,12 +29,12 @@ public abstract class AbstractCloner {
 	}
 	
 	/**
-	 * <p>Object stack used to returns values from visit methods.</p>
+	 * Object stack used to returns values from visit methods.
 	 */
 	private final Stack<Object> objectStack = new Stack<Object>();
 	
 	/**
-	 * <p>One to one map from original object to its clone.</p>
+	 * One to one map from original object to its clone.
 	 */
 	private final Map<Object, Object> clonedMap = new HashMap<Object, Object>();
 
@@ -44,8 +44,8 @@ public abstract class AbstractCloner {
 	private final Map<Object, List<PendingReference>> pendingReferenceMap = new HashMap<Object, List<PendingReference>>();
 
 	/**
-	 * <p>Cache that stores found method used to set references. It allows to 
-	 * search only once for each reference setter.</p>
+	 * Cache that stores found method used to set references. It allows to
+	 * search only once for each reference setter.
 	 */
 	private final Map<String, Method> referenceMethodCacheMap = new HashMap<String, Method>();
 
@@ -60,7 +60,7 @@ public abstract class AbstractCloner {
 	}
 	
 	/**
-	 * <p>Pops as many element as needed to get back to expected size.</p>
+	 * Pops as many element as needed to get back to expected size.
 	 * @param expectedSize resulting {@link #stackSize()}.
 	 * @param type type of each element
 	 * @return a {@link List} of pop elements

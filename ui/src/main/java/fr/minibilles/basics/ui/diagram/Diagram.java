@@ -17,7 +17,7 @@ import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.Rectangle;
 
 /**
- * <p>Abstract class for all diagrams.</p>
+ * Abstract class for all diagrams.
  * 
  * @author Jean-Charles Roger (original from Didier Simoneau).
  */
