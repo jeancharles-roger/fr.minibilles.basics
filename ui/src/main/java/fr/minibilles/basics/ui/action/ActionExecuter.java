@@ -3,6 +3,7 @@
  */
 package fr.minibilles.basics.ui.action;
 
+import fr.minibilles.basics.action.ActionRunnable;
 import fr.minibilles.basics.progress.ActionMonitor;
 
 

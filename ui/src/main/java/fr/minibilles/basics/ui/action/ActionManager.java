@@ -1,6 +1,7 @@
 package fr.minibilles.basics.ui.action;
 
 import fr.minibilles.basics.Basics;
+import fr.minibilles.basics.action.ActionRunnable;
 import java.util.List;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Image;

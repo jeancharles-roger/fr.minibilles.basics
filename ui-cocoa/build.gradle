@@ -1,6 +1,15 @@
 
 dependencies {
     compile project(':core')
-    compile project(':ui')
-    compile "org.eclipse.swt:org.eclipse.swt.cocoa.macosx:4.3"
+    compile "org.eclipse.swt:org.eclipse.swt.cocoa.macosx.x86_64:4.3"
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+            artifact sourceJar { classifier "sources" }
+            artifact javadocJar { classifier "javadoc" }
+        }
+    }
 }

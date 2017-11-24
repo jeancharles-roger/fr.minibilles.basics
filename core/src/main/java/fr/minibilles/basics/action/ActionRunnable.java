@@ -1,4 +1,4 @@
-package fr.minibilles.basics.ui.action;
+package fr.minibilles.basics.action;
 
 import fr.minibilles.basics.error.Diagnostic;
 import fr.minibilles.basics.progress.ActionMonitor;
@@ -11,25 +11,25 @@ import fr.minibilles.basics.progress.ActionMonitor;
 public interface ActionRunnable {
 	
 	/** The action is enable */
-	static final int VISIBILITY_ENABLE = 1;
+	int VISIBILITY_ENABLE = 1;
 	
 	/** The action is disable */
-	static final int VISIBILITY_DISABLE = 2;
+	int VISIBILITY_DISABLE = 2;
 	
 	/** The action is hidden */
-	static final int VISIBILITY_HIDDEN = 3;
+	int VISIBILITY_HIDDEN = 3;
 	
 	/** The action is running */
-	static final int VISIBILITY_RUNNING = 4;
+	int VISIBILITY_RUNNING = 4;
 	
 	/** The action's code ends normally */
-	static final int STATUS_OK = 1;
+	int STATUS_OK = 1;
 	
 	/** The action's code was canceled */
-	static final int STATUS_CANCEL = 2;
+	int STATUS_CANCEL = 2;
 	
 	/** The action's code gets in error */
-	static final int STATUS_ERROR = 3;
+	int STATUS_ERROR = 3;
 
 	/** Action's visibility */
 	int getVisibility();
@@ -46,7 +46,7 @@ public interface ActionRunnable {
 	
 	boolean getState();
 	
-	public class Stub implements ActionRunnable {
+	class Stub implements ActionRunnable {
 
 		protected Diagnostic diagnostic;
 		
