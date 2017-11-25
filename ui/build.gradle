@@ -1,5 +1,5 @@
 
-def localPlatform = platform()+ arch()
+def localPlatform = platform() + arch()
 
 configurations {
 
