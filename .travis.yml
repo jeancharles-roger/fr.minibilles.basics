@@ -14,7 +14,7 @@ notifications:
 
 deploy:
   provider: bintray
-#  on: production
+  on: production
   file: 'build/descriptor/descriptor.json'
   user: $BINTRAY_API_USER
   key: $BINTRAY_API_KEY
