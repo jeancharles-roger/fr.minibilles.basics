@@ -1,3 +1,4 @@
+import org.apache.tools.ant.filters.ReplaceTokens
 
 subprojects {
     apply plugin: "java"
@@ -39,7 +40,9 @@ task descriptor(type: Copy, group: 'publishing') {
 
     from rootProject.file('descriptor.json')
     into descriptorDir
-    expand(project: project.name, date: 'today', version: project.version)
+    //expand(project: project.name, date: 'today', version: project.version)
+    filter(ReplaceTokens, tokens: [project: project.name, date: 'today', version: project.version])
+
 }
 
 

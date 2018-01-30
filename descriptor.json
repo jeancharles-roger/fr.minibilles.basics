@@ -13,8 +13,8 @@
     "public_stats": true
   },
   "version": {
-    "name": "${version}",
-    "released": "${date}",
+    "name": "@version@",
+    "released": "@date@",
     "gpgSign": false
   },
   "files": [
