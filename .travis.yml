@@ -11,3 +11,9 @@ cache:
     - $HOME/.gradle/wrapper/
 notifications:
     slack: minibilles:2dXpzGnWFnhbU9WrAEwIPn7g
+
+deploy:
+#  on: production
+  file: 'build/descriptor/descriptor.json'
+  user: $BINTRAY_API_USER
+  key: $BINTRAY_API_KEY

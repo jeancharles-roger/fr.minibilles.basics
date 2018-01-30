@@ -1,0 +1,27 @@
+{
+  "package": {
+    "name": "basics",
+    "repo": "maven",
+    "subject": "jeancharles-roger",
+    "desc": "Basics jars",
+    "vcs_url": "https://github.com/jeancharles-roger/fr.minibilles.basics",
+    "website_url": "https://github.com/plug-obp",
+    "licenses": [
+      "MIT"
+    ],
+    "public_download_numbers": true,
+    "public_stats": true
+  },
+  "version": {
+    "name": "${version}",
+    "released": "${date}",
+    "gpgSign": false
+  },
+  "files": [
+    {
+      "includePattern": "./build/repo/fr/minibilles/basics/(.*)",
+      "uploadPattern": "./fr/minibilles/basics"
+    }
+  ],
+  "publish": true
+}

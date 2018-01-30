@@ -1,20 +1,7 @@
-plugins {
-    id "com.jfrog.bintray" version "1.7.3"
-}
-
-def bintrayUser = System.getenv("BINTRAY_USER")
-if (bintrayUser == null) {
-    bintrayUser = "jeancharles-roger"
-}
-
-def bintrayKey = System.getenv("BINTRAY_KEY")
 
 subprojects {
     apply plugin: "java"
     apply plugin: 'maven-publish'
-
-    group 'fr.minibilles.basics'
-    version '1.0.2'
 
     repositories {
         jcenter()
@@ -40,12 +27,19 @@ subprojects {
     publishing {
         repositories {
             maven {
-                url "https://api.bintray.com/content/${bintrayUser}/maven/${group}/${version}"
-                credentials {
-                    username = bintrayUser
-                    password = bintrayKey
-                }
+                url "${rootProject.buildDir}/repo"
             }
         }
     }
 }
+
+task descriptor(type: Copy, group: 'publishing') {
+    def descriptorDir = file("${project.buildDir}/descriptor")
+    if (!descriptorDir.exists()) descriptorDir.mkdirs()
+
+    from rootProject.file('descriptor.json')
+    into descriptorDir
+    expand(project: project.name, date: 'today', version: project.version)
+}
+
+
