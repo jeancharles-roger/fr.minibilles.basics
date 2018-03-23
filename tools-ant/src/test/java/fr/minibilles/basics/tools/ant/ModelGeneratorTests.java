@@ -28,7 +28,8 @@ public class ModelGeneratorTests {
 		task.setReplacer(true);
 		task.setModel(false);
 		task.setBoost(false);
-		task.setXml("simple");
+		//task.setXml("simple");
+		task.setSexp("simple");
 		task.execute();
 	}
 
