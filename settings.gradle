@@ -1,3 +1,3 @@
-include "core"
-include "ui", "ui-cocoa"
-include "tools", "tools-ant", "tools-gradle"
+include "basics-core"
+include "basics-ui", "basics-ui-cocoa"
+include "basics-tools", "basics-tools-ant", "basics-tools-gradle"

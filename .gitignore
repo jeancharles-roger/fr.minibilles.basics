@@ -1,15 +1,15 @@
 
 .idea/
-*.iml
-*.eml
-out/
+**/*.iml
+**/*.eml
+**/out/
 
-.classpath
-.project
-.settings/
-bin/
+**/.classpath
+**/.project
+**/.settings/
+**/bin/
 
 .gradle/
-build/
+**/build/
 
 tools-ant/src-generated

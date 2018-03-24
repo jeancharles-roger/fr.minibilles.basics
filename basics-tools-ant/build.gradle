@@ -1,0 +1,5 @@
+
+dependencies {
+    compile project(":basics-tools")
+    compile "org.apache.ant:ant:1.10.1"
+}

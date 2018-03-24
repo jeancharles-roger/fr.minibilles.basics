@@ -1,0 +1,23 @@
+apply plugin: 'groovy'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile project(":basics-tools")
+
+    compile gradleApi()
+    compile localGroovy()
+
+    testCompile 'junit:junit:4.12'
+}
+
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
