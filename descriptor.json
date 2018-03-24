@@ -23,5 +23,6 @@
       "uploadPattern": "./fr/minibilles/basics/$1"
     }
   ],
+  "override": true,
   "publish": true
 }
