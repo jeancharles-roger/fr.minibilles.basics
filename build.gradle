@@ -1,6 +1,17 @@
-import org.apache.tools.ant.filters.ReplaceTokens
+plugins {
+    id "com.jfrog.bintray" version "1.8.0"
+}
 
-subprojects {
+
+task upload(dependsOn: [
+    "basics-core:bintrayUpload",
+    "basics-tools:bintrayUpload",
+    "basics-tools-gradle:bintrayUpload",
+    "basics-ui:bintrayUpload",
+    "basics-ui-cocoa:bintrayUpload"
+])
+
+allprojects {
     apply plugin: "java"
     apply plugin: 'maven-publish'
 
@@ -32,17 +43,5 @@ subprojects {
             }
         }
     }
-}
-
-task descriptor(type: Copy, group: 'publishing') {
-    def descriptorDir = file("${project.buildDir}/descriptor")
-    if (!descriptorDir.exists()) descriptorDir.mkdirs()
-
-    from rootProject.file('descriptor.json')
-    into descriptorDir
-    //expand(project: project.name, date: 'today', version: project.version)
-    filter(ReplaceTokens, tokens: [project: project.name, date: 'today', version: project.version])
 
 }
-
-

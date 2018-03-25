@@ -1,7 +1,7 @@
 language: java
 jdk:
   - oraclejdk8
-script: ./gradlew descriptor publish
+script: ./gradlew build
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -11,10 +11,3 @@ cache:
     - $HOME/.gradle/wrapper/
 notifications:
     slack: minibilles:2dXpzGnWFnhbU9WrAEwIPn7g
-
-deploy:
-  provider: bintray
-  on: production
-  file: 'build/descriptor/descriptor.json'
-  user: $BINTRAY_API_USER
-  key: $BINTRAY_API_KEY

@@ -26,11 +26,13 @@ dependencies {
     linux64 "org.eclipse.swt:org.eclipse.swt.gtk.linux.x86_64:4.3"
 }
 
+apply plugin: "com.jfrog.bintray"
+
 publishing {
     configurations.each { configuration ->
         if (configuration.extendsFrom.contains(configurations.baseCompile)) {
             publications.create(configuration.name, MavenPublication) {
-                artifactId "ui-${configuration.name}"
+                artifactId "basics-ui-${configuration.name}"
 
                 from components.java
                 artifact sourceJar { classifier "sources" }
@@ -66,4 +68,30 @@ static def arch() {
 
 static def platform() {
     return System.getProperty('os.name').toLowerCase().split()[0]
+}
+
+
+bintray {
+    user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
+    key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_API_KEY')
+
+    publications = [ "mac64", "windows32", "windows64", "linux32", "linux64" ]
+
+    pkg {
+        name = project.group
+        repo = 'maven'
+        userOrg = 'jeancharles-roger'
+        desc = 'Plug artifacts'
+        vcsUrl = 'https://github.com/jeancharles-roger/fr.minibilles.basics'
+        websiteUrl = 'https://github.com/jeancharles-roger/fr.minibilles.basics'
+        licenses = ['MIT']
+        publicDownloadNumbers = true
+        override = true
+        publish = true
+
+        //Optional version descriptor
+        version {
+            name = project.version //Bintray logical version name
+        }
+    }
 }

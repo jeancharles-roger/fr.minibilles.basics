@@ -13,11 +13,39 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+apply plugin: "com.jfrog.bintray"
 
 publishing {
     publications {
-        mavenJava(MavenPublication) {
+        maven(MavenPublication) {
             from components.java
+            artifact sourceJar { classifier "sources" }
+            artifact javadocJar { classifier "javadoc" }
+        }
+    }
+}
+
+bintray {
+    user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
+    key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_API_KEY')
+
+    publications = ['maven']
+
+    pkg {
+        name = project.group
+        repo = 'maven'
+        userOrg = 'jeancharles-roger'
+        desc = 'Plug artifacts'
+        vcsUrl = 'https://github.com/jeancharles-roger/fr.minibilles.basics'
+        websiteUrl = 'https://github.com/jeancharles-roger/fr.minibilles.basics'
+        licenses = ['MIT']
+        publicDownloadNumbers = true
+        override = true
+        publish = true
+
+        //Optional version descriptor
+        version {
+            name = project.version //Bintray logical version name
         }
     }
 }
