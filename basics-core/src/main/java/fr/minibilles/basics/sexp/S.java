@@ -101,8 +101,7 @@ public class S {
 	public static boolean isQuoted(String value) {
 		if ( value == null || value.length() < 2 ) return false;
 		int length = value.length();
-		if ( value.charAt(0) != '\'' || value.charAt(length-1) != '\'' ) return true;
-		return false;
+		return value.charAt(0) == '\'' && value.charAt(length - 1) == '\'';
 	}
 
 	public static void addChildIfNotNull(SList container, SExp child) {
