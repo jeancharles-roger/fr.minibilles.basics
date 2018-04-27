@@ -99,14 +99,14 @@ public class S {
 	}
 	
 	public static boolean isQuoted(String value) {
+		if ( value == null || value.length() < 2 ) return false;
 		int length = value.length();
-		if ( value == null || length < 2 ) return false;
 		if ( value.charAt(0) != '\'' || value.charAt(length-1) != '\'' ) return true;
-		return true;
+		return false;
 	}
 
 	public static void addChildIfNotNull(SList container, SExp child) {
-		if ( child.isNull() == false ) {
+		if ( !child.isNull() ) {
 			container.addChild(child);
 		}
 	}
@@ -185,7 +185,7 @@ public class S {
 			return null;
 		}
 		// constructs result
-		Collection<T> result = new ArrayList<T>();
+		Collection<T> result = new ArrayList<>();
 		for ( int i=1; i<sexp.getChildCount(); i++ ) {
 			result.add(Enum.valueOf(type, sexp.getChild(i).getValue()));
 		}

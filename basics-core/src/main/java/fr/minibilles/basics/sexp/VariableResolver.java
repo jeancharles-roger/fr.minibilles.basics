@@ -29,7 +29,7 @@ public interface VariableResolver {
 	 * @author Jean-Charles Roger (jean-charles.roger@gmail.com)
 	 *
 	 */
-	public static class Mapped implements VariableResolver {
+	class Mapped implements VariableResolver {
 		private final Map<String, Object> values;
 		
 		public Mapped() {
