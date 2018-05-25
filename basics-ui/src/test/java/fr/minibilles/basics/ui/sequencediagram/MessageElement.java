@@ -10,7 +10,6 @@ import fr.minibilles.basics.ui.diagram.interaction.InteractionObject;
 import fr.minibilles.basics.ui.diagram.interaction.Outliner;
 import fr.minibilles.basics.ui.sequencediagram.model.Message;
 import java.util.List;
-import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.RGB;
 
 public class MessageElement extends Element.Stub {
@@ -69,10 +68,18 @@ public class MessageElement extends Element.Stub {
 	public void display(GC gc, DiagramContext context) {
 		GcUtils.drawLine(gc, sourcePoint, targetPoint);
 		
-		gc.setBackground(context.getResources().getSystemColor(SWT.COLOR_BLACK));
 		int direction = sourcePoint[0] < targetPoint[0] ? Geometry.EAST : Geometry.WEST;
-		GcUtils.drawTriangle2(gc, targetPoint[0], targetPoint[1], 5f, 5f, direction, true);
-		
+		float size = 10f;
+		int normalDir = Geometry.normalDirection(direction);
+
+		int left = Math.round(targetPoint[0] - Geometry.xDelta(direction) * size);
+		int right = Math.round(targetPoint[0]);
+		int top = Math.round(targetPoint[1] - Geometry.yDelta(normalDir) * size/2f);
+		int center = Math.round(targetPoint[1]);
+		int bottom = Math.round(targetPoint[1] + Geometry.yDelta(normalDir) * size/2f);
+		gc.drawLine(left, top, right, center);
+		gc.drawLine(left, bottom, right, center);
+
 		GcUtils.drawStringAligned(gc, message.getLabel(), (sourcePoint[0] + targetPoint[0])/2, (sourcePoint[1] + targetPoint[1])/2, Geometry.SOUTH);
 	}
 

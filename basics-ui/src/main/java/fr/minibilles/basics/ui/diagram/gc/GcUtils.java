@@ -139,7 +139,7 @@ public class GcUtils  {
 		if (fill) gc.fillPolygon(points);
 		gc.drawPolygon(points);
 	}
-	
+
 	public static void drawTriangle2(GC gc, float x, float y, float base, float height, int direction, boolean fill) {
 		int normalDir = Geometry.normalDirection(direction);
 		float base2 = base / 2f;

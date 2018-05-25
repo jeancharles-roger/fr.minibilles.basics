@@ -43,9 +43,10 @@ public class SequenceXmlParser extends DefaultHandler implements ContentHandler 
 		if (localName.equals("sequence") ) {
 			
 		} else if ( localName.equals("lifeline") ) {
-			float x = getFloatValue("x", attributes, localName);
+			float x = getFloatValue("x", attributes, localName, 0f);
+			float size = getFloatValue("size", attributes, localName, 100f);
 			String id = getStringValue("id", attributes, localName);
-			LifeLine line = new LifeLine(sequence, null, x);
+			LifeLine line = new LifeLine(sequence, null, x, size);
 			sequence.addLine(line);
 			context.push(line);
 			lines.put(id, line);
@@ -75,20 +76,26 @@ public class SequenceXmlParser extends DefaultHandler implements ContentHandler 
 		}
 	}
 
-	private float getFloatValue(final String attribute, Attributes attributes, String elementName) throws SAXException {
-		String valueString = getStringValue(attribute, attributes, elementName);
-		float value = 0f; 
-		try { 
-			value = Float.parseFloat(valueString); 
-		} catch (NumberFormatException e) { 
-			throw new SAXException("Error element '" + elementName + "' x value, '" + valueString + "' isn't a float number." );
+	private float getFloatValue(final String attribute, Attributes attributes, String elementName, float defaultValue) throws SAXException {
+		String valueString = getStringValue(attribute, attributes, elementName, false);
+		float value = defaultValue;
+		if (valueString != null) {
+			try {
+				value = Float.parseFloat(valueString);
+			} catch (NumberFormatException e) {
+				throw new SAXException("Error element '" + elementName + "' x value, '" + valueString + "' isn't a float number.");
+			}
 		}
 		return value;
 	}
 
 	private String getStringValue(final String attribute, Attributes attributes, String elementName) throws SAXException {
+		return getStringValue(attribute, attributes, elementName, true);
+	}
+
+	private String getStringValue(final String attribute, Attributes attributes, String elementName, boolean required) throws SAXException {
 		String valueString = attributes.getValue(attribute);
-		if ( valueString == null ) throw new SAXException("Error element '" + elementName + "' has not x value." );
+		if ( valueString == null && required ) throw new SAXException("Error element '" + elementName + "' has not "+ attribute +" value." );
 		return valueString;
 	}
 	

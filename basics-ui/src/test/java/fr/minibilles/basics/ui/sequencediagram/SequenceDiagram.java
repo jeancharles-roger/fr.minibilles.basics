@@ -79,7 +79,7 @@ public class SequenceDiagram extends Diagram<Sequence> {
 			}
 			
 			for ( LifeLine line : model.getLifeLineList() ) {
-				LifeLineElement element = new LifeLineElement(line, new float[] { line.getX(), 50f }, 100f, y);
+				LifeLineElement element = new LifeLineElement(line, new float[] { line.getX(), 50f }, line.getSize(), y);
 				addElement(0,element);
 			}
 		}

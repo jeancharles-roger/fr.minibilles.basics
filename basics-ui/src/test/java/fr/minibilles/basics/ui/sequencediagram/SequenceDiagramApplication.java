@@ -91,9 +91,9 @@ public class SequenceDiagramApplication {
 	
 	public static Sequence createSequence() {
 		Sequence sequence = new Sequence();
-		final LifeLine producer = new LifeLine(sequence, "producer", 100f);
-		final LifeLine bus = new LifeLine(sequence, "bus", 300f);
-		final LifeLine consumer = new LifeLine(sequence, "consumer", 500f);
+		final LifeLine producer = new LifeLine(sequence, "producer", 100f, 100f);
+		final LifeLine bus = new LifeLine(sequence, "bus", 300f, 100f);
+		final LifeLine consumer = new LifeLine(sequence, "consumer", 500f, 100f);
 
 		sequence.addLine(producer);
 		sequence.addLine(bus);
