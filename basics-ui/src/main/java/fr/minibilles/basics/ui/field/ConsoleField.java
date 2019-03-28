@@ -85,9 +85,7 @@ public class ConsoleField extends AbstractField {
 	
 	public void scrollToTheEnd() {
 		if (styledText != null && !styledText.isDisposed() ) {
-			// TODO find a way to force the scroll down on all Platforms.
-			int end = styledText.getCharCount()-1;
-			styledText.setSelection(end);
+			styledText.setTopIndex(styledText.getLineCount() - 1);
 		}
 	}
 	
